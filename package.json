@@ -1,0 +1,22 @@
+{
+  "name": "moka-studio-docs",
+  "version": "0.0.1",
+  "description": "MOKAStudio Documentation",
+  "main": "index.js",
+  "authors": {
+    "name": "Antonio Nardone",
+    "email": "swina.allen@gmail.com"
+  },
+  "repository": "/moka-studio-docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  },
+  "resolutions": {
+    "watchpack": "1.6.1"
+  }
+}
