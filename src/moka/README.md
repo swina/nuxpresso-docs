@@ -18,7 +18,11 @@ It has also other functionalities like Strapi content manager (Articles), media 
 
 - WYSIWYG design and creation of reusable blocks, templates, pages, widgets, forms and elements with full control of your content appearance without coding
 
+- Assign pages and templates created with MOKAStudio to your content
+
 - Copy&Paste, Duplicate elements, Hotkeys shortcuts, instant preview, screenshots, component treeview
+
+- Apply advanced animations to any element using GSAP animation engine (15 most common animations pre-configured)
 
 - Import/Export any block/component ot any other nuxpresso installation
 
@@ -43,10 +47,14 @@ Run first *nuxpresso-strapi* before to use MOKAStudio
 
 In order to create/update any block or article you need to authenticate as user on Strapi CMS.
 
-Thus means that you need to create a user and grant full permissions to the following collections:
+Thus means that you need to create a user and grant full permissions for the authenticated role to the following collections:
+
 - Articles
 - Categories
 - Components
 - Settings
 - Elements
 - File Upload
+
+You can alternatively create a custom role, create a user with your custom role and grant full permissions as above.
+

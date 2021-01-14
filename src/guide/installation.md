@@ -2,13 +2,38 @@
 
 ## Requirements
 
+<table>
+    <thead>
+        <th>Software</th>
+        <th>Minimum version</th>
+        <th>Recommended version</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Node.js</td>
+            <td>12.x</td>
+            <td>14.x</td>
+        </tr>
+        <tr>
+            <td>yarn (suggested)</td>
+            <td>1.22</td>
+            <td>1.22</td>
+        </tr>
+        <tr>
+            <td>npm</td>
+            <td>6.x</td>
+            <td>6.x</td>
+        </tr>
+    </tbody>
+</table>
+
 The following repos are required 
 
 - **[nuxpresso](https://github.com/swina/nuxpresso-nuxt)** a static site generator based on NuxtJS
 - **[MOKAStudio](https://github.com/swina/nuxpresso-moka)** a visual blocks builder
 - **[nuxpresso-strapi](https://github.com/swina/nuxpresso-strapi)** a [Strapi CMS](https://strapi.io) starter configured to work with nuxpresso and MOKAStudio
 
-To facilitate the process of running a working development environment I create a CLI to:
+To facilitate the process of running a working development environment I created a CLI to:
 
 - install the repos required
 - set the configuration for the apps required

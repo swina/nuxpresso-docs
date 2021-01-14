@@ -43,8 +43,8 @@ module.exports = {
         link: '/moka/'
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Strapi CMS',
+        link: 'https://strapi.io'
       }
     ],
     sidebar: {
@@ -57,8 +57,9 @@ module.exports = {
             'installation',
             'configuration',
             'workflow',
-            'mokastudio',
-            'using-vue',
+            'nuxpresso-nuxt',
+            'nuxpresso-strapi',
+            'mokastudio'
           ]
         }
       ],

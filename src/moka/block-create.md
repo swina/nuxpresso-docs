@@ -245,6 +245,16 @@ MOKAStudio will add the block to the editor.
 
 <img src="https://res.cloudinary.com/moodgiver/image/upload/v1610539399/moka_studio_editor_reusable_added_c035d9b785.png"/>
 
+## Save a block as reusable
+
+As mentioned before, from the blocks editor you can create a reusable block selecting the container element and click on the <i class="material-icons">archive</i> from the toolbar.
+
+You will asked some info about the new reusable block that will be created. Enter your info and click Save.
+
+> **Usage Example**
+>
+> Suppose you have a header (with his own container) that is replicated among different pages or templates. When you have decided you final design you can just save the block as reusable and then import other pages, templates or whenever you need
+
 
 
 ## Remove Blocks/Elements

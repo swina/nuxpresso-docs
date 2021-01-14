@@ -1,5 +1,5 @@
 # [MOKAStudio](/moka)
 
 
-## [MOKAStudio Guide](/moka)
+#### Go to [MOKAStudio Guide](/moka)
 

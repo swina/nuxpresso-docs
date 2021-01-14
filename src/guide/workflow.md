@@ -55,16 +55,21 @@ SITE_EMAIL=_SITE_EMAIL_
 
 The answer depends on your needs. 
 
-If you are planning to test nuxpresso use the standard workflow. Is a full local development environment and you only required to use an external media provider and an external email provider.
+#### Test environment
 
-If you are planning to develop a real website my suggestion is to use a mixed workflow, where the CMS is in a pre-production configuration with a public access. You need to add the environment configuration manually depending on your provider when **nuxpresso-strapi** Strapi CMS Starter is installed.
+If you are planning to set a test environment use the **standard workflow**. It's a full local development environment. You can also use an external media provider and an external email provider. Follows the [Strapi CMS configuration notes](/guide/configuration.html#strapi-cms-configuration-notes) on how to configure external providers
+
+#### Staging environment
+
+If you are planning to develop a real website my suggestion is to use a mixed workflow, where the CMS is in a pre-production configuration with a public access. You need to add the environment configuration manually depending on your provider where **nuxpresso-strapi** Strapi CMS Starter is installed.
+
+> If you plan to deploy Strapi CMS with a local media upload option please notice that for some hosting providers that regenerate the app (like the dynos for Heroku free plan) assets are not persistent. This will result in possible broken links or reference to media assets in your blocks or even pages. 
+> In this case my advice is to use an external provider (like Cloudinary that has a free plan) as a stable source.
 
 Run **nuxpresso** static site generator and **MOKAStudio** locally to start working on your website.
 
-When your development is completed or you just want to check a public preview of your website deploy **nuxpresso-strapi** in production.
+When your development is completed or you just want to check a public preview of your website deploy **nuxpresso** static site generator to production.
 
-> **MOKAStudio** is not required to be deployed since it can connect directly to your CMS.**
->
-> In this case any change, update will automatically update your CMS.
->
-> In order to reflect the changes you need to deploy **nuxpresso**
+> **MOKAStudio is not required to be deployed since it can connect directly to your CMS.**
+> 
+> **For security reasons my advice is to not deploy MOKAStudio**

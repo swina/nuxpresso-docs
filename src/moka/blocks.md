@@ -18,6 +18,7 @@ MOKAStudio organizes your blocks with the following categories:
 - Archive: blocks not used or considered archive
 - Favorites: blocks marked as favorite
 
+
 ## Blocks types
 
 You can also assign to each block a specific type. Block types are not related to a block category. In this way you can have block of same type that belongs to different categories.
@@ -220,3 +221,36 @@ This is a constrain defined by design in MOKAStudio.
         ]
     }
 ```
+
+## How blocks are connected to my Strapi CMS articles/content?
+
+The concept is very simple but can be misanderstood.
+
+### 1st scenario: website homepage with static content
+
+Normally today homepages (usually not for blogs) are pages designed to give immediate different informations, enriched with graphic elements, video, widgets like sliders, call to action, animations and so on that are not simple text.
+
+With MOKAStudio you can create complex pages and connect directly to a Strapi CMS Article.
+Just create a new article, add a title and connect to a template/page. If your page/template is designed to be the homepage, you will just to mark the article as homepage.
+
+NUXPRESSO will automatically display you MOKAStudio page as homepage
+
+### 2nd scenario: internal dynamic pages with textual content
+
+Internal pages normally share the same layout, with some common elements like header, footer, sidebar, etc.
+
+Start with the design of the common elements.
+Then add which article elements you want to output to your block, customize as per your design requirements.
+
+Save the document with Category -> template, click on the <i class="material-icons">settings</i> icon in the topbar just after the document title
+
+<img src="https://res.cloudinary.com/moodgiver/image/upload/v1610557813/moka_studio_editor_document_settings_cdffd6ab19.png"/>
+
+- Select Category -> template
+- Checkout **Default template** to true
+
+NUXPRESSO will automatically display any page that doesn't have a specific template assigned to use the Default template.
+
+### 3rd scenario: a list of articles (loop)
+
+Follow the same procedure above
