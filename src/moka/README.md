@@ -14,9 +14,29 @@ It has also other functionalities like Strapi content manager (Articles), media 
 <img src="https://res.cloudinary.com/moodgiver/image/upload/v1610372315/nuxpresso_splash_screen_b4149ebc5a.jpg" style="margin:0 auto;"/>
 
 
+
+## Terminology
+
+- **Article**: represent a content saved in your CMS
+- **Category**: used to classify and organize articles
+- **Document**: refers to a block of group blocks
+- **Block**: a block is a structured object composed of HTML elements and rendered as HTML and CSS
+- **Element**: HTML element like div, p, img, etc. In MOKAStudio each element is an object
+- **Container**: HTML element (grid and flexbox) used to define a block layout and that includes other HTML elements or even other containers (nested containers)
+- **Customizer**: an option panel used to define its layout and appearance an element/block assigning defined CSS classes 
+- **Reusable block**: any block you create becomes a reusable block. Reusable blocks can be imported in any other block.
+- **Page**: block category; a group of blocks which output is normally a complete webpage
+- **Template**: block category; a group of blocks which output is a mix of static elements and dynamic elements referred to an article or a group of articles
+- **Widget**: block category; a block or group of blocks that has a specific scope or functionality (call to action, content, menu, header, footer, etc)
+- **Block type**: used to organize blocks depending on their usage scope
+
+
+
 ## Features
 
 - WYSIWYG design and creation of reusable blocks, templates, pages, widgets, forms and elements with full control of your content appearance without coding
+
+- Granular control of the blocks/elements design supported by TailwindCSS pseudo classes
 
 - Assign pages and templates created with MOKAStudio to your content
 
@@ -42,6 +62,8 @@ If you didn't use the CLI to launch the app start with the following command
 ```
 
 Run first *nuxpresso-strapi* before to use MOKAStudio
+
+
 
 ## Login 
 

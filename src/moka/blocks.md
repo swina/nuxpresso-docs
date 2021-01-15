@@ -231,7 +231,10 @@ The concept is very simple but can be misanderstood.
 Normally today homepages (usually not for blogs) are pages designed to give immediate different informations, enriched with graphic elements, video, widgets like sliders, call to action, animations and so on that are not simple text.
 
 With MOKAStudio you can create complex pages and connect directly to a Strapi CMS Article.
-Just create a new article, add a title and connect to a template/page. If your page/template is designed to be the homepage, you will just to mark the article as homepage.
+You have two different modes to create assign a page or template to a page:
+
+- from the MOKAStudio editor click on the <i class="material-icons">web</i> icon in the editor topbar and create a new article directly
+- create a new article from CMS > Articles, add a title and connect to a template/page. If your page/template is designed to be the homepage, you will just to mark the article as homepage.
 
 NUXPRESSO will automatically display you MOKAStudio page as homepage
 

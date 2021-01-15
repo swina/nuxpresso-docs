@@ -27,8 +27,8 @@ It's a WYSYWYG dashboard organized as follows:
 
 The **Topbar** is set to:
 
-- **close** the current editor window clicking on the red circle at the top left of the window
-- **preview**: full preview of the current document clicking on the green circle
+- **close** the current editor window clicking on the <i class="material-icons" style="color:red">fiber_manual_record</i> icon at the top left of the window
+- **preview**: full preview of the current document clicking on the <i class="material-icons" style="color:green">fiber_manual_record</i> icon
 - name of the current document, category and unique ID
 - at the right you have a group of icons with the following functions:
     - <i class="material-icons">save</i> **save**
