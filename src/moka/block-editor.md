@@ -33,6 +33,7 @@ The **Topbar** is set to:
 - at the right you have a group of icons with the following functions:
     - <i class="material-icons">save</i> **save**
     - <i class="material-icons">file_copy</i> **duplicate** or save as
+    - <i class="material-icons">web</i> **create** a new article that will use the document as layout
     - <i class="material-icons">system_update_alt</i> **import** a reusable block
     - <i class="material-icons">backup</i> **export** the current document to file (JSON)
     - <i class="material-icons">remove_red_eye</i> **preview** preview the current document

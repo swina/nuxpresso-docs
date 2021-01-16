@@ -1,4 +1,4 @@
-# NUXPRESSO Workflow
+# Workflow
 
 NUXPRESSO has been designed to be a set of developer tools to create and maintain web sites based on Strapi CMS.
 
@@ -15,14 +15,8 @@ Thus means that the normal workflow should be as follows:
 
 ### Deployment to production
 
-- deploy **nuxpresso-strapi** Strapi CMS Starter on a provider of your choice
-- deploy **nuxpresso** static site generator on a provider of your choice
-- transfer your assets, database to the production environment
-
-
-## Mixed Workflow
-
-- deploy **nuxpresso-strapi** Strapi CMS Starter to a provider of your choice. In this case you need to set the environment key values depending on your provider requirements. The keys required are:
+- create a repo (Github,GitLab) of your Strapi CMS created with **nuxpresso-strapi-template**
+- deploy using your repo on a provider of your choice, settings the environment variables as follows
 
 ```
 HOST=0.0.0.0
@@ -30,7 +24,6 @@ PORT=1337
 DEV_USER=_STRAPI_ADMIN_USERNAME_
 DEV_PASS=_STRAPI_ADMIN_PASSWORD
 DEV_EMAIL=_STRAPI_ADMIN_EMAIL_
-ADMIN_JWT_SECRET=_add_your_JWT_secret_
 DATABASE_CLIENT=_DATABASE_CLIENT_
 DATABASE_HOST=_DATABASE_HOST_
 DATABASE_PORT=_DATABASE_PORT_
@@ -38,18 +31,19 @@ DATABASE_NAME=_DATABASE_NAME_
 DATABASE_USERNAME=_DATABASE_USERNAME_
 DATABASE_PASSWORD=_DATABASE_PASSWORD
 DATABASE_SSL=_DATABASE_SSL_
-CLOUDINARY_API_KEY=_CLOUDINARY_API_KEY_
-CLOUDINARY_API_SECRET=_CLOUDINARY_API_SECRET_
-CLOUDINARY_CLOUD_NAME=_CLOUDINARY_CLOUD_NAME_
-MAILGUN_API_KEY=_MAILGUN_API_KEY_
-MAILGUN_DOMAIN=_MAILGUN_DOMAIN_
-MAILGUN_FROM=_MAILGUN_FROM_EMAIL_ADDRESS_
-MAILGUN_REPLYTO=_MAILGUN_REPLYTO_EMAIL_ADDRESS
 SITE_EMAIL=_SITE_EMAIL_
 ```
 
-- create the local development environment settings the Strapi CMS configuration to the remote **nuxpresso-strapi** installation
-- run **nuxpresso** and **MOKAStudio** locally. In this way they will connect to the remote Strapi CMS installation
+Export your local database to the remote one.
+
+## Mixed workflow
+
+A mixed workflow means that your development will work on a Strapi CMS public installation and deployment. 
+In this case you won't need to dump any data from your local development.
+
+- create a repo (Github,GitLab) of your Strapi CMS created with **nuxpresso-strapi-template**
+- deploy using your repo on a provider of your choice, settings the environment variables as indicated above
+- update the environment variables for **nuxpresso** and **MOKAStudio** to connect to your Strapi installation
 
 ## Which workflow to use?
 
@@ -61,7 +55,7 @@ If you are planning to set a test environment use the **standard workflow**. It'
 
 #### Staging environment
 
-If you are planning to develop a real website my suggestion is to use a mixed workflow, where the CMS is in a pre-production configuration with a public access. You need to add the environment configuration manually depending on your provider where **nuxpresso-strapi** Strapi CMS Starter is installed.
+If you are planning to develop a real website my suggestion is to use a mixed workflow, where the CMS is in a pre-production configuration with a public access. You need to add the environment configuration manually depending on your provider where Strapi CMS is installed.
 
 > If you plan to deploy Strapi CMS with a local media upload option please notice that for some hosting providers that regenerate the app (like the dynos for Heroku free plan) assets are not persistent. This will result in possible broken links or reference to media assets in your blocks or even pages. 
 > In this case my advice is to use an external provider (like Cloudinary that has a free plan) as a stable source.

@@ -31,66 +31,53 @@ The following repos are required
 
 - **[nuxpresso](https://github.com/swina/nuxpresso-nuxt)** a static site generator based on NuxtJS
 - **[MOKAStudio](https://github.com/swina/nuxpresso-moka)** a visual blocks builder
-- **[nuxpresso-strapi](https://github.com/swina/nuxpresso-strapi)** a [Strapi CMS](https://strapi.io) starter configured to work with nuxpresso and MOKAStudio
+- **[nuxpresso-strapi-template](https://github.com/swina/nuxpresso-strapi)** a [Strapi CMS](https://strapi.io) template
 
-To facilitate the process of running a working development environment I created a CLI to:
+## Installation
 
-- install the repos required
-- set the configuration for the apps required
-- run the development environment based on the configuration set during the installation
-
-## Using the CLI
-
-### Install the CLI
+Create a working folder
 
 ```
-npm install -g nuxp-cli 
+/ $ mkdir nuxpresso
+/ $ cd nuxpresso
 ```
 
-### Install Nuxpresso
+### Install nuxpresso-nuxt
+
+Install **nuxpresso-nuxt** dependencies
 
 ```
-mkdir nuxpresso
-cd nuxpresso
-nuxp-cli nuxpresso:new
+/nuxpresso $ git clone https://github.com/swina/nuxpresso-nuxt
+/nuxpresso $ cd nuxpresso-nuxt
+/nuxpresso/nuxpresso-nuxt $ yarn (or npm install)
 ```
 
-This will install all the repos required with the following structure from your nuxpresso folder.
+### Install MOKA Studio
+
+Install **MOKA Studio** dependencies
 
 ```
-|--nuxpresso-moka
-|--nuxpresso-nuxt
-|--nuxpresso-strapi
+/nuxpresso $ git clone https://github.com/swina/nuxpresso-moka
+/nuxpresso $ cd nuxpresso-moka
+/nuxpresso/nuxpresso-moka $ yarn (or npm install)
 ```
 
-**nuxpresso-moka** : MOKAStudio 
+### Install Strapi CMS
 
-**nuxpresso-nuxt** : nuxpresso site generator based on NUXTJS
+Install Strapi CMS using the **nuxpresso-strapi-template** template
 
-**nuxpresso-strapi** : Strapi CMS starter to work with nuxpresso
-
-
-## Manual Installation
-
-#### NUXPRESSO - Static site generator 
+With yarn 
 
 ```
-git clone https://github.com/swina/nuxpresso-nuxt
-yarn install
-```
-#### MOKAStudio - Visual Blocks Builder
-
-```
-git clone https://github.com/swina/nuxpresso-moka
-yarn install
+/nuxpresso $ yarn create strapi-app nuxpresso-strapi --template https://github.com/swina/nuxpresso-strapi-template
 ```
 
-#### nuxpresso-strapi - Strapi CMS starter
+With npx
 
 ```
-git clone https://github.com/swina/nuxpresso-strapi
-yarn install
+npx create-strapi-app nuxpresso-strapi --template https://github.com/swina/nuxpresso-strapi-template
 ```
+
 
 
 

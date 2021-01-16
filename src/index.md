@@ -9,7 +9,7 @@ features:
   details: Static Site Generator
 - title: MOKAStudio
   details: Visual Blocks Builder
-- title: Nuxpresso Strapi
-  details: A Strapi CMS starter for nuxpresso
+- title: Strapi CMS
+  details: Strapi CMS with a custom template
 footer: Made by Antonio Nardone with ❤️
 ---

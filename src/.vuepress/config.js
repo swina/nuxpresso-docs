@@ -56,6 +56,7 @@ module.exports = {
             '',
             'installation',
             'configuration',
+            'deploy',
             'workflow',
             'nuxpresso-nuxt',
             'nuxpresso-strapi',

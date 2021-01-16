@@ -1,4 +1,4 @@
-# Static Site Generator
+# NUXPRESSO Static Site Generator
 
 **nuxpresso-nuxt** is the static site generator used to publish your website. 
 

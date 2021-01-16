@@ -1,150 +1,72 @@
 # Configuration
 
+In order to connect to your Strapi CMS you need to configure **nuxpresso** and **MOKA Studio**
 
+## nuxpresso configuration
 
-## Configure nuxpresso installation
-
-Run the following command
-
-```
-nuxp-cli config
-```
-A new terminal screen will be initiated
+Create an ```.env``` file at the root folder of nuxpresso (default ```nuxpresso-nuxt```) and add the following environment variables
 
 ```
-? Do you want to configure nuxpresso (existing configuration will be overwritten)? Yes
-? Strapi HOST IP 0.0.0.0
-? Strapi HOST PORT 1338
-? Strapi Admin username admin
-? Strapi Admin password [hidden]
-? Strapi Admin Email admin@test.test
-? DATABASE Type postgres
-? DATABASE Host 127.0.0.1
-? DATABASE Port 5435
-? DATABASE Name nuxpresso-strapi
-? DATABASE Username
-? DATABASE Password [hidden]
-? DATABASE SSL No
-? Cloudinary API KEY (leave blank if not used)
-? Cloudinary API SECRET  (leave blank if not used)
-? Cloudinary Cloud Name  (leave blank if not used)
-? Mailgun API KEY  (leave blank if not used)
-? Mailgun Domain  (leave blank if not used)
-? Mailgun Email From  (leave blank if not used)
-? Mailgun Reply To  (leave blank if not used)
-? SITE Email ()
-
-
-? Confirm configuration? (Use arrow keys)
-> Confirm
-  Restart
-  Quit                                                                                                                                                                                
+API_URL=http://localhost:1337/
+RECAPTCHA=_RECAPTCHA_API_KEY (if used)
+NUXPRESSO_TITLE=nuxpresso
+NUXPRESSO_HEADLINE=Your next CMS
 ```
 
-When confirmed the CLI will automatically create the env configuration files for all the apps.
+- API_URL : Strapi CMS url
+- RECAPTCHA : the Recaptcha API KEY (not required in local environment). We suggest to use it in production environment
+- NUXPRESSO_TITLE: website title
+- NUXPRESSO_HEADLINE : website headline
 
-## Strapi CMS configuration notes
 
-nuxpresso-strapi is configured to run using local resources for upload and email.
 
-By the way nuxpresso will install the following dependencies for:
+## MOKAStudio configuration
 
-- [Cloudinary](https://cloudinary.com) as media provider ( strapi-provider-upload-cloudinary )
-- [Mailgun](https://mailgun.com) as email provider ( strapi-provider-email-mailgun )
-
-If you don't plan to use external media and email providers you can remove them.
+Create an ```.env``` file at the root folder of nuxpresso (default ```nuxpresso-moka```) and add the following environment variables
 
 ```
-/nuxpresso $ cd nuxpresso-strapi
-yarn remove strapi-provider-upload-cloudinary strapi-provider-email-mailgun
+VUE_APP_API_URL=http://localhost:1337/
+VUE_APP_GRAPHQL=http://localhost:1337/graphql
+VUE_APP_DEV_USER=_username_
+VUE_APP_DEV_PASSWORD=_password_
+VUE_APP_DEV_EMAIL=_email_
+VUE_APP_FONT_FAMILIES=|Abel|Alice|Alegreya|Amethysta|Nunito+Sans|Roboto|Quattrocento|Raleway|Lora|PT+Sans
 ```
 
-### Using external providers
+- VUE_APP_API_URL : Strapi CSM url
+- VUE_APP_GRAPHQL : Strapi Graphql endpoint
+- VUE_APP_DEV_USER : Strapi CMS Authenticated user to work with MOKAStudio
+- VUE_APP_DEV_PASSWORD : user password
+- VUE_APP_DEV_EMAIL : email address
 
-If you plan to use external providers like Cloudinary and Mailgun you need to update the ```config/plugin.js``` file as follow.
+> **A user is required in order to update Strapi CMS data.**
+>
+> **Setting this user credential MOKAStudio will create the user at first run**
 
-```
-module.exports = ({env})=>({
-    //GraphQL is required and installed by default: do not remove
-    graphql: {
-      endpoint: '/graphql',
-      tracing: false,
-      shadowCRUD: true,
-      playgroundAlways: true,
-      depthLimit: 7,
-      amountLimit: 100,
-    },
+## Strapi CMS configuration
 
-    //Cloudinary media provider
-    upload: {
-      provider: "cloudinary",
-      providerOptions: {
-        cloud_name: env('CLOUDINARY_CLOUD_NAME'),
-        api_key: env('CLOUDINARY_API_KEY'),
-        api_secret: env('CLOUDINARY_API_SECRET')
-      }
-    },
-    //Mailgun media provider
-    email: {
-      provider: 'mailgun',
-      providerOptions: {
-        apiKey: env('MAILGUN_API_KEY'),
-        domain: env('MAILGUN_DOMAIN')
-      },
-      settings: {
-        defaultFrom: env('MAILGUN_FROM'),
-        defaultReplyTo: env('MAILGUN_REPLYTO')
-      },
-    },
-
-})
-```
-
-If you are using different providers you have to install the relative dependencies needed and update the ```config/plugins.js``` depending on the provider you are using and update the relative environment variables. 
-
-Please refer to the official [Strapi CMS documentation](https://strapi.io/documentation/) on how to configure you providers.
+In local development no special configuration is required. All configuration and settings are automatically created at installation time.
 
 
-## Build Strapi admin
-
-After the configuration you need to run the Strapi CMS build in order to set it working. This will also create the admin user defined in the config process. Be sure to move to the nuxpresso-strapi installation folder.
-
-```
-cd nuxpresso-strapi
-yarn build
-```
-
-## Run the development environment
-
-When the Strapi build process is completed you can run the nuxpresso development environment using the following CLI command
-
-```
-nuxp-cli nuxpresso:dev
-```
-
-As for the configuraiton procedure you will have
+## Running nuxpresso 
 
 
-As per default configuration you will have: 
- - Strapi CMS running (http://localhost:1337 by default)
- - NUXPRESSO (http://localhost:3000)
- - MOKAStudio (http://localhost:8080)
+#### Run Strapi CMS
+If you followed our installation and configuration guide you have a [Strapi CMS running](http://localhost:1337/admin), otherwise 
 
-
-Alternatively you can run each app indipendently
-
-Strapi CMS
 ```
 /nuxpresso/nuxpresso-strapi $ yarn develop
 ```
 
-nuxpresso
+#### Run nuxpresso
 ```
 /nuxpresso/nuxpresso-nuxt $ yarn dev
 ```
+Checkout here [nuxpresso](http://localhost:3000)
 
-MOKAStudio
+#### Run MOKAStudio
 
 ```
 /nuxpresso/nuxpresso-moka $ yarn serve
 ```
+Checkout here [MOKAStudio](http://localhost:8080)

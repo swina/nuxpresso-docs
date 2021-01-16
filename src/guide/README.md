@@ -9,7 +9,7 @@
 NUXPRESSO is based on 3 apps:
 - **nuxpresso-nuxt** a static site generator based on NuxtJS
 - **MOKAStudio** a visual blocks builder created to improve the websites creative experience for developers.
-- **nuxpresso-strapi** a Strapi CMS starter  
+- [**Strapi CMS**](https://strapi.io) with **nuxpresso-strapi-template** a Strapi CMS template to configure Strapi working with nuxpresso 
 
 The following diagram shows the relations between the 3 apps.
 
