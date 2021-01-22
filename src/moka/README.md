@@ -17,18 +17,20 @@ It has also other functionalities like Strapi content manager (Articles), media 
 
 ## Terminology
 
-- **Article**: represent a content saved in your CMS
-- **Category**: used to classify and organize articles
-- **Document**: refers to a block of group blocks
-- **Block**: a block is a structured object composed of HTML elements and rendered as HTML and CSS
-- **Element**: HTML element like div, p, img, etc. In MOKAStudio each element is an object
-- **Container**: HTML element (grid and flexbox) used to define a block layout and that includes other HTML elements or even other containers (nested containers)
-- **Customizer**: an option panel used to define its layout and appearance an element/block assigning defined CSS classes 
-- **Reusable block**: any block you create becomes a reusable block. Reusable blocks can be imported in any other block.
-- **Page**: block category; a group of blocks which output is normally a complete webpage
-- **Template**: block category; a group of blocks which output is a mix of static elements and dynamic elements referred to an article or a group of articles
-- **Widget**: block category; a block or group of blocks that has a specific scope or functionality (call to action, content, menu, header, footer, etc)
-- **Block type**: used to organize blocks depending on their usage scope
+| Term | Description
+| :------- | :--- |
+| **Article** | represent a content saved in your CMS 
+| **Category** | used to classify and organize articles
+| **Document** | refers to a block of group blocks
+| **Block** | a block is a structured object composed of HTML elements and rendered as HTML and CSS
+| **Element** | HTML element like div, p, img, etc. In MOKAStudio each element is an object
+| **Container** | HTML element (grid and flexbox) used to define a block layout and that includes other HTML |elements or even other containers (nested containers)
+| **Customizer** | an option panel used to define its layout and appearance an element/block assigning defined CSS classes 
+| **Reusable block** | any block you create becomes a reusable block. Reusable blocks can be imported in any other block.
+| **Page** | block category; a group of blocks which output is normally a complete webpage
+| **Template** | block category; a group of blocks which output is a mix of static elements and dynamic elements referred to an article or a group of articles
+| **Widget** | block category; a block or group of blocks that has a specific scope or functionality (call to action, content, menu, header, footer, etc)
+| **Block type** | used to organize blocks depending on their usage scope
 
 
 
@@ -61,22 +63,13 @@ If you didn't use the CLI to launch the app start with the following command
 /nuxpresso/nuxpresso-moka $ yarn serve
 ```
 
-Run first *nuxpresso-strapi* before to use MOKAStudio
+**Run first *nuxpresso-strapi* before to use MOKAStudio**
 
 
 
 ## Login 
 
-In order to create/update any block or article you need to authenticate as user on Strapi CMS.
+At first run MOKAStudio will create the user you defined in the .env as per the configuration guide.
 
-Thus means that you need to create a user and grant full permissions for the authenticated role to the following collections:
-
-- Articles
-- Categories
-- Components
-- Settings
-- Elements
-- File Upload
-
-You can alternatively create a custom role, create a user with your custom role and grant full permissions as above.
+After the creation refresh the page (F5). MOKAStudio will automatically login to Strapi CMS
 

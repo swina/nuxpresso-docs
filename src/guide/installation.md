@@ -27,11 +27,6 @@
     </tbody>
 </table>
 
-The following repos are required 
-
-- **[nuxpresso](https://github.com/swina/nuxpresso-nuxt)** a static site generator based on NuxtJS
-- **[MOKAStudio](https://github.com/swina/nuxpresso-moka)** a visual blocks builder
-- **[nuxpresso-strapi-template](https://github.com/swina/nuxpresso-strapi)** a [Strapi CMS](https://strapi.io) template
 
 ## Installation
 
@@ -44,7 +39,7 @@ Create a working folder
 
 ### Install nuxpresso-nuxt
 
-Install **nuxpresso-nuxt** dependencies
+Clone the [repo](https://github.com/swina/nuxpresso-nuxt) and install **nuxpresso-nuxt** dependencies
 
 ```
 /nuxpresso $ git clone https://github.com/swina/nuxpresso-nuxt
@@ -54,7 +49,7 @@ Install **nuxpresso-nuxt** dependencies
 
 ### Install MOKA Studio
 
-Install **MOKA Studio** dependencies
+Clone the [repo](https://github.com/swina/nuxpresso-moka) and install **MOKA Studio** dependencies
 
 ```
 /nuxpresso $ git clone https://github.com/swina/nuxpresso-moka
@@ -66,18 +61,31 @@ Install **MOKA Studio** dependencies
 
 Install Strapi CMS using the **nuxpresso-strapi-template** template
 
-With yarn 
+With **yarn** 
 
 ```
 /nuxpresso $ yarn create strapi-app nuxpresso-strapi --template https://github.com/swina/nuxpresso-strapi-template
 ```
 
-With npx
+With **npx**
 
 ```
 npx create-strapi-app nuxpresso-strapi --template https://github.com/swina/nuxpresso-strapi-template
 ```
 
+Follow the instructions required by the Strapi CMS installation.
+At first run **nuxpresso-strapi-template** will: 
 
+- create the admin user 
+    - user : admin
+    - password: password
+    - firstname: Admin
+    - lastname: Admin
+    - email: admin@strapi.local
+- import a library of blocks ready to use
+- set a default settings
+- create a initial simple homepage
 
+> **nuxpresso-strapi-template** is intended to be used in local environment and uses a custom ./config/bootstrap.js. If you plan to deploy your Strapi CMS installation create environment variables according to the [deployment section](/guide/deploy.html#strapi-cms-deployment)
 
+After Strapi CMS installation your nuxpresso Strapi CMS is running at [localhost:1337/admin](http://localhost:1337/admin)

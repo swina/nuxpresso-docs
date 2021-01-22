@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'NUXPRESSO',
+  title: 'nuxpresso',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -75,7 +75,9 @@ module.exports = {
             'blocks',
             'block-editor',
             'block-create',
-            'block-customizer'
+            'block-customizer',
+            'block-customizer-extend',
+            'block-library'
           ]
         }
       ]

@@ -4,7 +4,7 @@
 ## Editor Dashboard
 
 The Editor Dashboard is the place where you create, update your blocks.
-<img src="https://res.cloudinary.com/moodgiver/image/upload/v1610187197/moka_studio_editor_window_25eee4eefd.png"/>
+<img style="border:1px solid #444" src="https://res.cloudinary.com/moodgiver/image/upload/v1610187197/moka_studio_editor_window_25eee4eefd.png"/>
 
 It's a WYSYWYG dashboard organized as follows:
 
@@ -17,6 +17,64 @@ It's a WYSYWYG dashboard organized as follows:
 
 > Since a block can be a set of blocks we refer to a **document** as the global block that is composed of different blocks
 
+## Document settings
+
+Click on the <i class="material-icons">settings</i> located on the Topbar after the block title to open the document settings.
+
+<img src="https://res.cloudinary.com/moodgiver/image/upload/v1610842465/moka_editor_document_settings_64034f2b5b.png" style="border:1px solid #ddd"/>
+
+#### Name
+Document name
+
+#### Description
+Document description
+
+#### Category
+Assign a category to the document
+- widget
+- page
+- template
+- slider
+- component
+- archive
+- favorite
+
+#### Type
+assign a type to the document
+
+You can define your types clicking on the <i class="material-icons">add</i> icon
+
+#### Body settings
+You can assign the body colors for text and background
+
+#### Default template
+When checked any article with no page/template assignment will use the document/block checked as default.
+
+#### Loop
+When checked any loop page (list of articles) will use the template.
+You can set which url will serve the template. The url available are :
+
+- all : any loop page (/articles) will use the current template
+- example.com/articles
+- example.com/articles/category/_your_category_
+
+Nuxpresso create by default the following friendly urls for loops:
+
+- your_domain/articles : list of articles
+- your_domain/articles/category: list of articles by category
+
+(option available only for templates)
+
+#### Pagination
+
+Enable the pagination per loop templates
+(option available only for templates)
+
+### Articles per page
+
+Number of articles listed in the loop
+(option available only for templates)
+
 
 ## Topbar
 
@@ -28,8 +86,10 @@ It's a WYSYWYG dashboard organized as follows:
 The **Topbar** is set to:
 
 - **close** the current editor window clicking on the <i class="material-icons" style="color:red">fiber_manual_record</i> icon at the top left of the window
+- **select**: select the current document clicking on the <i class="material-icons" style="color:yellow">fiber_manual_record</i> icon
 - **preview**: full preview of the current document clicking on the <i class="material-icons" style="color:green">fiber_manual_record</i> icon
 - name of the current document, category and unique ID
+- <i class="material-icons">settings</i> document settings
 - at the right you have a group of icons with the following functions:
     - <i class="material-icons">save</i> **save**
     - <i class="material-icons">file_copy</i> **duplicate** or save as
@@ -142,16 +202,81 @@ From the Status Bar you can also view/update the CSS Classes for the current ele
 
 <i class="material-icons">edit</i> open the CSS classes editor and style editor for the element
 
-<i class="material-icons">brush</i> open the **Customizer**
+<i class="material-icons">brush</i> open the [**Customizer**](/moka/block-customizer)
 
 
+## Animations
 
-### Customizer
+MOKAStudio includes support to [GSAP](https://greensock.com/gsap/) animation engine by Greensock. 
+
+Thus means that you can assign animations to any block/element directly from the block editor.
+
+I created a set of most common animations ready to use.
+
+To assign an animation to a selected block/element click on the <i class="material-icons">motion_photos_on</i> from the Toolbar or press **Ctrl + a**
+
+<img src="https://res.cloudinary.com/moodgiver/image/upload/v1610883811/moka_editor_animations_988b956fcd.png"/>
+
+### Animation settings
+
+- **Animation** : select an animation from the list 
+- **Easing** : select an easing settings from the list
+- **Duration** : set the animation duration in secs
+- **Delay**: set the animation delay (0=plays immediately)
+
+### ScrollTrigger
+
+MOKAStudio animations supports the GSAP ScrollTrigger plugin.
+
+Thus means that the animation **will not be fired** when the element if off the screen but only when it is visible.
+
+### Add animations
+
+You can add your custom animation updating the file 
+
+**Path -** ./src/plugins/animations.js
 
 
-<img src="https://res.cloudinary.com/moodgiver/image/upload/v1609820115/moka_editor_tailwind_panel_e999e42ad8.png"/>
+```
+// ---- YOUR ANIMATIONS GO HERE ---
 
-The **Customizer** is the panel that gives you access to the design settings of the current element.
-It is a powerful panel that converts your settings to TailwindCSS classes.
 
-Go to [**Block Customizer**](/moka/block-customizer) for a detailed documentation.
+gsap.registerEffect({
+    name: "myanimation",
+    effect: (targets, config) => {
+        return gsap.fromTo(targets, 
+            {
+                scale:0,
+                opacity:0
+            },
+            {
+                scale:1,
+                opacity:1,
+                duration: config.duration, 
+                ease: config.ease,
+                delay: config.delay
+            }
+        );
+    },
+    defaults: {duration: duration, delay:0, ease:"power1" }, //defaults get applied to any "config" object passed to the effect
+    extendTimeline: true, //now you can call the effect directly on any GSAP timeline to have the result immediately inserted in the position you define (default is sequenced at the end)
+});
+
+
+// --- END OF YOUR ANIMATIONS ---
+
+...
+
+```
+
+
+Update ```const gsapEffects``` array adding your animation/s name.
+
+```
+// ADD YOUR ANIMATION name to the gsapEffect array
+const gsapEffects = [ 'fade' , 'scale' , 'scale-in' , 'flip-x' , 'flip-y' , 'slide-left' , 'slide-right' , 'slide-top' , 'slide-down', 'rotate' , 'rotate-scale' , 'rotate-hover' , 'grow-width' , 'width-reverse' , 'close-left' , 'close-right' , 'grow-height' ]
+```
+
+The ```const gsapEase``` are the easing modes available in GSAP. Do not change it. 
+
+> Learn how to write your own animations from the [official GSAP documentation](https://greensock.com/docs/v3/GSAP/gsap.effects) 

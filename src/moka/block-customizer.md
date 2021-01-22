@@ -1,4 +1,4 @@
-# Block/Element Customizer
+# Block Editor Customizer
 
 The **Customizer** is the panel that gives you access to the design settings of the current element.
 It is a powerful panel that converts your settings to TailwindCSS classes.
@@ -7,13 +7,21 @@ It reflects almost all the TailwindCSS utility classes with some extended values
 
 <img src="https://res.cloudinary.com/moodgiver/image/upload/v1609820115/moka_editor_tailwind_panel_e999e42ad8.png"/>
 
+To open the **Customizer** clicking on the <i class="material-icons">brush</i> located:
+
+- selected block/element floating bar
+- editor toolbar
+
+or press **Ctrl + z**
+
+### Settings
 
 The Customizer is designed to be a tool in order to control the design of a block and all elements.
-In other words is the layout control panel of your blocks where you can control:
+In other words is the layout control panel of your blocks/elements where you can control:
 
 - containers settings
 - elements position
-- alignments and justify
+- alignment and justify
 - typography
 - color and background
 - padding, spacing and margins
@@ -30,22 +38,140 @@ Other settings are:
 - Popup/Modal for popup elements
 
 
-## Customizer Settings
 
-The Customizer settings are :
+## Grid 
 
-- Grid: grid settings (if current element is a grid)
-- Flex: flex settings (if current element is a flexbox)
-- Box Align: box alignment
-- Box Justify: box justify
-- Position: element positioning
-- Dimension: width and height
-- Text: text elements settings
-- Background: element background settings
-- Padding: padding settings
+- Grip gap
 
-## Grid Settings
+## Flex
 
-When you add a <i class="material-icons">view_column</i> Column element MOKAStudio opens a modal window where you can select the multicolumn layout.
+- Grid Column Span
+- Direction (flex direction)
+- Wrap (flex wrap)
+- Grow (flex grow)
+- Shrink (flex shrink)
+- Flex order
 
-<img src="https://res.cloudinary.com/moodgiver/image/upload/v1610464432/moka_editor_grid_templates_564658ec7d.png"/>
+## Box Align
+- Align Items
+- Align Content
+- Align Self
+
+## Box Justify
+- Justify Content
+- Justify Items
+- Justify Self
+
+## Position
+- Position (static,fixed,absolute,relative,sticky,modal)
+- Top, Left, Bottom, Right
+- Translate: you can translate any element on both axis with negative/positive values
+- Z Index
+- Object Fit
+
+## Dimension
+- Width
+- Height
+
+## Text
+- Color / Over Color
+- Size
+- Align
+- Weight
+- Decoration (5 icons for italic, underline, lowercase, uppercase, capitalize)
+- Letter Spacing
+- Line Height
+- Font
+- Opacity
+
+## Background
+
+- Color / Over Color
+- Gradient color (from, via, to)
+- Gradient direction
+- Size (for background images)
+- Position
+- Repeat
+- Attachment
+- Clip
+- Opacity
+
+## Padding
+
+- All sides
+- Top
+- Bottom
+- Left
+- Right
+
+## Margin 
+
+- All sides
+- Top
+- Bottom
+- Left
+- Right
+
+Supports negative values
+
+## Spacing
+
+- All sides
+- Top
+- Bottom
+- Left
+- Right
+
+## Border
+
+- All sides
+- Top
+- Bottom
+- Left
+- Right
+- Color / Over color
+- Border type
+- Opacity
+
+## Rounded / Shadow
+
+- Rounded (border-radius)
+- Shadow
+
+## CSS Animations
+
+- Animation (ping, bounce, spin, pulse)
+
+## Transform 
+
+- SkewX
+- SkewY
+- Rotate
+- Clip Path (experimental with predefined clip path classes) 
+
+## HTML Semantic
+
+- Semantic (most common semantic tags)
+
+This option is available only for containers
+
+## Media
+
+- Link any media to the current element
+
+This option is available for :
+
+- containers as background image selection
+- image element
+
+## Link / Anchor
+
+- create a link on any element
+    - external link / anchor link (#link)
+    - article link
+- add an anchor to any element
+
+
+
+
+

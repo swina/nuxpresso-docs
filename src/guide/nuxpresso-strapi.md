@@ -65,6 +65,11 @@ During installation it adds the following collections to the general schema:
 
 The administrator user will be created automatically at Strapi CMS bootstrap.
 
+> email: admin@strapi.local
+> username: admin
+> password: password
+
+
 **In order to use MOKAStudio you need to create a user (Users collection) and grant full permission to the authenticated role to the collections above mentioned and File Upload endpoints.**
 
 > My advice is to create a custom role (like Developers) and assign the MOKAStudio user to that role. Then grant full permissions only to this role. In this way you can manage the Authenticated role in a standard way, or as per your needs.
@@ -78,19 +83,18 @@ When you create Strapi CMS using nuxpresso-strapi-template it will create some i
 - standard settings
 
 
-## Custom config and controllers
+## Custom API models and controllers
 
-Following are the custom configuration and controllers created by nuxpresso-strapi-template
+Following are the custom models and controllers created by nuxpresso-strapi-template
 
 
 ### API 
 
 #### Articles
 
+**Path -** ./api/articles/models/article.js
 
 ```
-// api/articles/models/article.js
-
 'use strict';
 module.exports = {
     lifecycles : {
@@ -103,15 +107,14 @@ module.exports = {
 };
 ```
 
-**This create a stripped slug based on the title used by nuxpresso as friendly url**
+**This create a stripped slug based on the title used by nuxpresso as friendly url when a new article has been added**
 
 
 
 #### Contacts
 
-
+**Path -** ./api/contacts/controllers/contacts.js
 ```
-// api/contacts/controllers/contacts.js
 'use strict';
 
 module.exports = {

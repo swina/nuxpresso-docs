@@ -2,7 +2,7 @@
 
 In order to connect to your Strapi CMS you need to configure **nuxpresso** and **MOKA Studio**
 
-## nuxpresso configuration
+## nuxpresso
 
 Create an ```.env``` file at the root folder of nuxpresso (default ```nuxpresso-nuxt```) and add the following environment variables
 
@@ -11,19 +11,49 @@ API_URL=http://localhost:1337/
 RECAPTCHA=_RECAPTCHA_API_KEY (if used)
 NUXPRESSO_TITLE=nuxpresso
 NUXPRESSO_HEADLINE=Your next CMS
+FONT_FAMILIES=Barlow+Condensed|Abel|Alice|Alegreya|Amethysta|Nunito+Sans|Roboto|Quattrocento|Raleway|Lora|PT+Sans
 ```
 
 - API_URL : Strapi CMS url
 - RECAPTCHA : the Recaptcha API KEY (not required in local environment). We suggest to use it in production environment
 - NUXPRESSO_TITLE: website title
 - NUXPRESSO_HEADLINE : website headline
+- FONT_FAMILIES: list of fonts used separated by |. Read about Fonts [support](/guide/configuration.html#font-support)
 
 
+### Google Analytics
 
-## MOKAStudio configuration
+nuxpresso by default install the package **@nuxtjs/google-analytics**. The package is installed as dev dependency since it will be used only at building.
 
-Create an ```.env``` file at the root folder of nuxpresso (default ```nuxpresso-moka```) and add the following environment variables
+If your website will not use Google Analytics update **./nuxt.config.js** removing 
 
+**Path -** *./nuxt.config.js*
+```
+    ....
+    /*
+    ** GOOGLE ANALYTICS remove if you don't use
+    */
+    googleAnalytics: {
+        id: process.env.GOOGLE_ANALYTICS || 'UA-XXX-X'
+    }
+    ...
+```
+
+and remove the buildModules configuration
+
+
+```
+  buildModules: [
+     ...
+    '@nuxtjs/google-analytics'
+  ],
+```
+
+## MOKAStudio
+
+Create an ```.env``` file at the root folder of MOKAStudio (default ```nuxpresso-moka```) and add the following environment variables
+
+**Path -** *./.env*
 ```
 VUE_APP_API_URL=http://localhost:1337/
 VUE_APP_GRAPHQL=http://localhost:1337/graphql
@@ -38,14 +68,39 @@ VUE_APP_FONT_FAMILIES=|Abel|Alice|Alegreya|Amethysta|Nunito+Sans|Roboto|Quattroc
 - VUE_APP_DEV_USER : Strapi CMS Authenticated user to work with MOKAStudio
 - VUE_APP_DEV_PASSWORD : user password
 - VUE_APP_DEV_EMAIL : email address
+- VUE_APP_FONT_FAMILIES : list of font families separated by |. MOKAStudio adds by default the Barlow Condensed font used by the application. For this reason the first character of the environment variable is |.
 
 > **A user is required in order to update Strapi CMS data.**
 >
 > **Setting this user credential MOKAStudio will create the user at first run**
 
-## Strapi CMS configuration
+#### Font support
 
-In local development no special configuration is required. All configuration and settings are automatically created at installation time.
+> You can add your fonts using the environment variables. Any font added here will be available in MOKAStudio as font setting for any element. 
+>
+> To reduce the size of extra fonts in **nuxpresso** add only fonts that are used on your website 
+
+
+
+## Strapi CMS
+
+In local development no special configuration is required. All configuration and settings are automatically created at installation time. By the way you need to update the permissions for the Public role.
+
+### Update the Public Role permissions
+
+**In order to work nuxpresso needs you need to grant read permissions to the Public role.**
+
+- Login to the Strapi CMS.
+- Go to **Settings**
+- **USER PERMISSIONS AND SETTINGS > Roles**
+- Click on **Public**
+- Checkout the find / findone / count (if available) for all the APPLICATION collections
+- Checkout the find / findone / count for FILE UPLOAD
+
+<img src="https://res.cloudinary.com/moodgiver/image/upload/v1610886096/strapi_public_permissions_c6999fee15.png"/>
+
+> **Checkout as per image for all APPLICATION collections and FILE UPLOAD**
+
 
 
 ## Running nuxpresso 

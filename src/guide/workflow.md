@@ -16,23 +16,7 @@ Thus means that the normal workflow should be as follows:
 ### Deployment to production
 
 - create a repo (Github,GitLab) of your Strapi CMS created with **nuxpresso-strapi-template**
-- deploy using your repo on a provider of your choice, settings the environment variables as follows
-
-```
-HOST=0.0.0.0
-PORT=1337
-DEV_USER=_STRAPI_ADMIN_USERNAME_
-DEV_PASS=_STRAPI_ADMIN_PASSWORD
-DEV_EMAIL=_STRAPI_ADMIN_EMAIL_
-DATABASE_CLIENT=_DATABASE_CLIENT_
-DATABASE_HOST=_DATABASE_HOST_
-DATABASE_PORT=_DATABASE_PORT_
-DATABASE_NAME=_DATABASE_NAME_
-DATABASE_USERNAME=_DATABASE_USERNAME_
-DATABASE_PASSWORD=_DATABASE_PASSWORD
-DATABASE_SSL=_DATABASE_SSL_
-SITE_EMAIL=_SITE_EMAIL_
-```
+- deploy using your repo on a provider of your choice
 
 Export your local database to the remote one.
 
@@ -42,7 +26,7 @@ A mixed workflow means that your development will work on a Strapi CMS public in
 In this case you won't need to dump any data from your local development.
 
 - create a repo (Github,GitLab) of your Strapi CMS created with **nuxpresso-strapi-template**
-- deploy using your repo on a provider of your choice, settings the environment variables as indicated above
+- deploy using your repo on a provider of your choice, settings the environment variables as indicated in the configuration guide
 - update the environment variables for **nuxpresso** and **MOKAStudio** to connect to your Strapi installation
 
 ## Which workflow to use?

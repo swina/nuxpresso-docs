@@ -1,4 +1,4 @@
-# NUXPRESSO Static Site Generator
+# nuxpresso Static Site Generator
 
 **nuxpresso-nuxt** is the static site generator used to publish your website. 
 
@@ -8,15 +8,64 @@ All settings and configuration, as well the content (articles) and relative layo
 
 **nuxpresso-nuxt** needs only some environment variables to connect to your Strapi CMS app.
 
-*.env*
+> Please read the [configuration section](/guide/configuration.html#nuxpresso) before to run nuxpresso.
+
+**Required configuration**
+
+**Path-***./.env*
 
 ```
 API_URL=_Strapi_CMS_URL_
+GOOGLE_ANALYTICS=UA-XXXXXXX
 RECAPTCHA=_RECAPTCHA_API_KEY_
 NUXPRESSO_TITLE=_YOUR_WEBSITE_TITLE_
 NUXPRESSO_HEADLINE=_YOUR_WEBSITE_HEADLINE_
+FONT_FAMILIES=_FONTS_LIST_SEPARATED_BY_|_
 ```
-> Environment variables are automatically generated if you use nuxp-cli to configure your local environment
->
-> By the way you need to create the environment variables in the deploy environment in order to work correctly
 
+> GOOGLE_ANALYTICS and RECAPTCHA are not required in development mode
+
+
+## First run
+
+```
+nuxpresso $ cd /nuxpresso-nuxt
+nuxpresso/nuxpresso-nuxt $ yarn dev
+```
+
+Connect to [nuxpresso](http://localhost:3000)
+
+By default a sample homepage will be displayed.
+
+
+## Google Analytics
+
+nuxpresso by default install the package **@nuxtjs/google-analytics**.
+If you are not planning to use Google Analytics on your website remove with
+
+```
+yarn remove @nuxtjs/google-analytics
+```
+
+Then update **./nuxt.config.js** removing 
+
+```
+    ....
+    /*
+    ** GOOGLE ANALYTICS remove if you don't use
+    */
+    googleAnalytics: {
+        id: process.env.GOOGLE_ANALYTICS || 'UA-XXX-X'
+    }
+    ...
+```
+
+and remove from the buildModules
+
+
+```
+  buildModules: [
+     ...
+    '@nuxtjs/google-analytics'
+  ],
+```
