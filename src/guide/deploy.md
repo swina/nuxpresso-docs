@@ -23,18 +23,6 @@ If you plan to deploy MOKAStudio on a public server just use the original [repo]
 Strapi CMS for nuxpresso is based on a custom template. If you plan to deploy on most common providers like Heroku, AWS or others that support, you must create a repository with the Strapi CMS created following this guide.
 
 
-Create a repo on your repository account
-
-Add remote origin to your nuxpresso Strapi CMS folder
-
-```
-/nuxpresso/nuxpresso-strapi $ git remote add origin https://github.com/_user_/_repo.git_
-```
-
-Where _user_ is your username and _repo.git_ your repo name
-
-> Be sure the env files are included in the .gitignore list
-
 ### Configuration variables
 
 Following are the configuration variables to create in your production environment
@@ -53,7 +41,7 @@ SITE_EMAIL=_SITE_EMAIL_
 
 ### Database connection 
 
-- create  **./config/database.js**
+- update  **./config/database.js**
 
 **Path -** ./config/database.js (using postgres)
 
@@ -64,7 +52,7 @@ module.exports = ({ env }) => ({
     default: {
       connector: 'bookshelf',
       settings: {
-        client: 'postgres',
+        client: env('DATABASE_CLIENT),
         host: env('DATABASE_HOST'),
         port: env.int('DATABASE_PORT'),
         database: env('DATABASE_NAME'),
@@ -85,6 +73,22 @@ If you plan to use external providers plugins (upload, email, etc) in your produ
 - add the environment variables required by your plugins
 - update the ```./config/plugin.js```
 
+### Create a repo and deploy it
+
+Create a repo on your repository account
+
+Add remote origin to your nuxpresso Strapi CMS folder
+
+```
+/nuxpresso/nuxpresso-strapi $ git remote add origin https://github.com/_user_/_repo.git_
+```
+
+Where _user_ is your username and _repo.git_ your repo name
+
+> Be sure the env files are included in the .gitignore list
+
+Deploy using your repo.
+
 ### Strapi documentation
 
 > For more info please read the [official Strapi CMS documentation](https://strapi.io/documentation/developer-docs/latest/admin-panel/deploy.html) about deployment and plugin installation
@@ -96,5 +100,5 @@ If you plan to use external providers plugins (upload, email, etc) in your produ
 nuxpresso Strapi CMS template is configured to work with local assets and service (upload and email).
 Thus means that for some providers, like Heroku free plan, the assets will be deleted when application is restarted (dynos)
 
-I suggest to read my [Workflow](/guide/workflow.html) guide in order to decide your own workflow that fits with your needs.
+I suggest to read my [Workflow](/guide/workflow.html) guide in order to understand better NUXPRESSO workflow.
 

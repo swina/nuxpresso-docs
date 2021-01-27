@@ -84,7 +84,37 @@ VUE_APP_FONT_FAMILIES=|Abel|Alice|Alegreya|Amethysta|Nunito+Sans|Roboto|Quattroc
 
 ## Strapi CMS
 
-In local development no special configuration is required. All configuration and settings are automatically created at installation time. By the way you need to update the permissions for the Public role.
+In local development no special configuration is required. All configuration and settings are automatically created at installation time except for the GraphQL plugin. To add GraphQL support yuo need to create a 
+./config/plugins.js as follows
+
+**Path -** ./config/plugins.js
+
+```
+module.exports = ({ env }) => ({
+    //.. other plugins configuration ...
+    graphql: {
+      endpoint: '/graphql',
+      tracing: false,
+      shadowCRUD: true,
+      playgroundAlways: true,
+      depthLimit: 7,
+      amountLimit: 100,
+    }
+});
+```
+
+
+
+
+## Running nuxpresso 
+
+
+#### Run Strapi CMS
+If you followed our installation and configuration guide you have a [Strapi CMS running](http://localhost:1337/admin), otherwise 
+
+```
+/nuxpresso/nuxpresso-strapi $ yarn develop
+```
 
 ### Update the Public Role permissions
 
@@ -102,16 +132,6 @@ In local development no special configuration is required. All configuration and
 > **Checkout as per image for all APPLICATION collections and FILE UPLOAD**
 
 
-
-## Running nuxpresso 
-
-
-#### Run Strapi CMS
-If you followed our installation and configuration guide you have a [Strapi CMS running](http://localhost:1337/admin), otherwise 
-
-```
-/nuxpresso/nuxpresso-strapi $ yarn develop
-```
 
 #### Run nuxpresso
 ```

@@ -5,7 +5,7 @@
 
 ## Collections
 
-During installation it adds the following collections to the general schema:
+After installation at bootstrap it adds the following collections to the general schema:
 
 <table>
     <thead>
@@ -63,7 +63,7 @@ During installation it adds the following collections to the general schema:
 
 ## Roles and users
 
-The administrator user will be created automatically at Strapi CMS bootstrap.
+The administrator user will be created automatically at Strapi CMS bootstrap (development mode only).
 
 > email: admin@strapi.local
 > username: admin
@@ -80,7 +80,7 @@ When you create Strapi CMS using nuxpresso-strapi-template it will create some i
 
 - a library of blocks (page samples and a default template)
 - a default article as homepage with a default template
-- standard settings
+- settings and elements needed to use with MOKAStudio (single collections)
 
 
 ## Custom API models and controllers
@@ -90,7 +90,13 @@ Following are the custom models and controllers created by nuxpresso-strapi-temp
 
 ### API 
 
-#### Articles
+#### Articles Slug
+
+To take advantage of friendly URLs STRAPI whenever an article is create or updated slugify the title to create a valid slug. 
+
+The slug will be used by nuxpresso website as pages URL 
+
+**http://your_website/articles/_article_slug_**
 
 **Path -** ./api/articles/models/article.js
 

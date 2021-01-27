@@ -1,53 +1,82 @@
 # Workflow
 
-NUXPRESSO has been designed to be a set of developer tools to create and maintain web sites based on Strapi CMS.
+NUXPRESSO has been designed to simplify the process to create and maintain web sites based on Strapi CMS.
+
+The concept is to deploy only the data you need nothing more. This will keep your production environment clean and more efficient.
+
+Using MOKAStudio in development mode you will be able to transfer/update your articles and the relative design (blocks) easily with just a click.
 
 Thus means that the normal workflow should be as follows:
 
-## Standard Workflow
-
-### Local development
+## Local development
 
 - create the local development environment installing the apps required
 - configure the local environment
 - create blocks, content and add media assets using MOKAStudio
 - local preview of the result using NUXPRESSO Static Site Generator
 
-### Deployment to production
+## Deployment to production
 
+- deploy **nuxpresso** static site generator [**nuxpresso-nuxt**](https://github.com/swina/nuxpresso-nuxt)
 - create a repo (Github,GitLab) of your Strapi CMS created with **nuxpresso-strapi-template**
 - deploy using your repo on a provider of your choice
 
-Export your local database to the remote one.
+## Staging: Transfer articles/pages
 
-## Mixed workflow
+> In order to be able to transfer/update your articles you need to set the environment variables to connect to your deployed Strapi CMS.
+>
+> Your env file will be as follow
 
-A mixed workflow means that your development will work on a Strapi CMS public installation and deployment. 
-In this case you won't need to dump any data from your local development.
 
-- create a repo (Github,GitLab) of your Strapi CMS created with **nuxpresso-strapi-template**
-- deploy using your repo on a provider of your choice, settings the environment variables as indicated in the configuration guide
-- update the environment variables for **nuxpresso** and **MOKAStudio** to connect to your Strapi installation
+**Path -** *./.env*
 
-## Which workflow to use?
+```
+VUE_APP_API_URL=http://localhost:1337/
+VUE_APP_GRAPHQL=http://localhost:1337/graphql
+VUE_APP_DEV_USER=_username_
+VUE_APP_DEV_PASSWORD=_password_
+VUE_APP_DEV_EMAIL=_email_
+VUE_APP_FONT_FAMILIES=|Abel|Alice|Alegreya|Amethysta|Nunito+Sans|Roboto|Quattrocento|Raleway|Lora|PT+Sans
+VUE_APP_PRODUCTION_URL=_STRAPI_CMS_REMOTE_URL_
+VUE_APP_PRODUCTION_GRAPHQL=_REMOTE_STRAPI_CMS_GRAPHQL_URL_
+VUE_APP_REMOTE_USER=_REMOTE_STRAPI_CMS_USER_
+VUE_APP_REMOTE_PASSWORD=_REMOTE_STRAPI_CMS_PASSWORD
+```
 
-The answer depends on your needs. 
+VUE_APP_PRODUCTION_URL : Your Strapi production URL
+VUE_APP_PRODUCTION_GRAPHQL : Your Strapi GraphQL endpoint
+VUE_APP_REMOTE_USER : Strapi production user
+VUE_APP_REMOTE_PASSWORD: Strapi production user password
 
-#### Test environment
 
-If you are planning to set a test environment use the **standard workflow**. It's a full local development environment. You can also use an external media provider and an external email provider. Follows the [Strapi CMS configuration notes](/guide/configuration.html#strapi-cms-configuration-notes) on how to configure external providers
+<img src="https://res.cloudinary.com/moodgiver/image/upload/v1611680287/moka_studio_staging_7bdc71b70c.png"/>
 
-#### Staging environment
+When you have your production environment ready and running :
+- from MOKAStudio select **Staging**
+- wait for connection to your remote Strapi CMS instance
+- click on Articles
+- from the list of Articles double click on the page of your local environment that you want to transfer/update
 
-If you are planning to develop a real website my suggestion is to use a mixed workflow, where the CMS is in a pre-production configuration with a public access. You need to add the environment configuration manually depending on your provider where Strapi CMS is installed.
+This procedure will add/update the remote Strapi CMS instance tranferring only the pages you need for your website.
 
-> If you plan to deploy Strapi CMS with a local media upload option please notice that for some hosting providers that regenerate the app (like the dynos for Heroku free plan) assets are not persistent. This will result in possible broken links or reference to media assets in your blocks or even pages. 
-> In this case my advice is to use an external provider (like Cloudinary that has a free plan) as a stable source.
+If a page exists (same slug) you will be asked to overwrite the page. Confirm to update the page.
 
-Run **nuxpresso** static site generator and **MOKAStudio** locally to start working on your website.
+### Transfer blocks
 
-When your development is completed or you just want to check a public preview of your website deploy **nuxpresso** static site generator to production.
+Normally you don't need to transfer any block other then the loop template block. This is used to output the articles list (page loop) as per your design.
 
-> **MOKAStudio is not required to be deployed since it can connect directly to your CMS.**
-> 
-> **For security reasons my advice is to not deploy MOKAStudio**
+> Production environment doesn't require you transfer any block other then the loop templates.
+
+### Media assets
+
+My advice is to use an external media provider also in development mode since this will simplify the deployment and data transfer. 
+
+Thus because using the staging feature you can update your production data without the need to transfer any media.
+
+In NUXPRESSO all media reference are automatically converted with the relative URL of the location of the media asset.
+
+For this reason **if you don't use an external provider** your media assets will be referred with the following URL
+
+```
+https://_your_strapi_url/upload/_file_name
+```
