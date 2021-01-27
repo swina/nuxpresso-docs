@@ -9,6 +9,11 @@
 
 **MOKAStudio** is a visual blocks builder and generator for Strapi CMS created to improve the websites creative experience for developers.
 
+<video width="640" controls="true">
+    <source src="https://res.cloudinary.com/moodgiver/video/upload/v1611771844/MOKA_Studio_Options_b543bd6ed3.webm">
+</video>
+
+
 It has also other functionalities like Strapi content manager (Articles), media manager, staging to production workflow and deploy actions.
 
 <img src="https://res.cloudinary.com/moodgiver/image/upload/v1610372315/nuxpresso_splash_screen_b4149ebc5a.jpg" style="margin:0 auto;"/>

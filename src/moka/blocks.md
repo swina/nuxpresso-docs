@@ -10,13 +10,15 @@ From here you can create, edit, duplicate, remove, import and export your blocks
 
 MOKAStudio organizes your blocks with the following categories:
 
-- Widgets: blocks with specific functionalities or scope. 
-- Pages: collection of blocks representing webpages
-- Templates: blocks used to output dynamic content from your Strapi CMS content. Single or loop colections
-- Slider: a special category used to manage your slider
-- Components: collection of generic blocks
-- Archive: blocks not used or considered archive
-- Favorites: blocks marked as favorite
+| Category | Description
+| :--- | :---
+| **Widget**    | blocks with specific functionalities or scope. 
+| **Page**      | collection of blocks representing webpages
+| **Template**  | blocks used to output dynamic content from your Strapi CMS content. Single or loop colections
+| **Slider**    | a special category used to manage your slider
+| **Component**| collection of generic blocks
+| **Archive**   | blocks not used or considered archive
+| **Favorite** | blocks marked as favorite
 
 
 ## Blocks types
@@ -256,4 +258,5 @@ NUXPRESSO will automatically display any page that doesn't have a specific templ
 
 ### 3rd scenario: a list of articles (loop)
 
-Follow the same procedure above
+Follow the same procedure above.
+Here you can also set how many articles per page you want to output.

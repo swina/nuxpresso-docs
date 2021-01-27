@@ -5,9 +5,31 @@ To publish your website you need to deploy **nuxpresso** (nuxpresso-nuxt) static
 
 ## nuxpresso
 
-nuxpresso is the static site generator that will run your website.
-You can deploy nuxpresso using directly the official [repo](https://github.com/swina/nuxpresso-nuxt).
-Set the deployment environment variables as indicated in the configuration updating the data to connect to your Strapi CMS. Refer to [nuxpresso configuration](/guide/configuration.html#nuxpresso-configuration)
+nuxpresso is the static site generator that will run your website. 
+
+Create a repo of your nuxpresso installation. 
+
+When you have created your website in the local development run the generate command 
+
+```
+/nuxpresso/nuxpresso-nuxt $ yarn generate
+```
+
+This will create you static version in the **./dist** folder
+
+Then commit to your repo
+
+```
+/nuxpresso/nuxpresso-nuxt $ git add .
+/nuxpresso/nuxpresso-nuxt $ git commit -m "My website"
+/nuxpresso/nuxpresso-nuxt $ git push -u origin master
+```
+
+If you are using providers like Netlify, Vercel, ecc. connect the deployment to your repo.
+To publish leave the deployment command to build
+
+
+Set the deployment environment variables as indicated in the configuration updating the data to connect to your production Strapi CMS. Refer to [nuxpresso configuration](/guide/configuration.html#nuxpresso-configuration)
 
 ## MOKAStudio
 

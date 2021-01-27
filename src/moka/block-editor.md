@@ -213,7 +213,7 @@ Thus means that you can assign animations to any block/element directly from the
 
 I created a set of most common animations ready to use.
 
-To assign an animation to a selected block/element click on the <i class="material-icons">motion_photos_on</i> from the Toolbar or press **Ctrl + a**
+To assign an animation to a selected block/element click on the <i class="material-icons">motion_photos_on</i> from the Toolbar or press **Alt + a**
 
 <img src="https://res.cloudinary.com/moodgiver/image/upload/v1610883811/moka_editor_animations_988b956fcd.png"/>
 
@@ -280,3 +280,38 @@ const gsapEffects = [ 'fade' , 'scale' , 'scale-in' , 'flip-x' , 'flip-y' , 'sli
 The ```const gsapEase``` are the easing modes available in GSAP. Do not change it. 
 
 > Learn how to write your own animations from the [official GSAP documentation](https://greensock.com/docs/v3/GSAP/gsap.effects) 
+
+## Keyboard shortcuts
+
+### Selected element shortcuts
+
+| Keyboard  | Shortcut
+| :---      | :---
+| **Alt + i** | add element (only containers)
+| **Alt + u** | add reusable block (only containers)
+| **Alt + d** | duplicate element
+| **Alt + w** | edit content / add image
+| **Alt + z** | open the **Customizer**
+| **Alt + r** | remove element (confirmation required)
+| **Alt + c** | copy current element to the clipboard
+| **Alt + v** | paste the copied element to the current element (must be a container)
+| **Alt + g** | copy the design settings to the clipboard (CSS classes)
+| **Alt + h** | paste the design settings copied before and apply to the current element
+| **Alt + o** | create image of current element
+
+### Editor shortcuts
+
+
+| Keyboard  | Shortcut
+| :---      | :---
+| **Alt + s** | save block
+| **Alt + b** | preview
+
+### Preview shortcuts
+
+| Keyboard  | Shortcut
+| :---      | :---
+| **Alt + s** | save block with image preview
+| **Alt + x** | close preview
+| **Alt + k** | display rendered HTML markup
+

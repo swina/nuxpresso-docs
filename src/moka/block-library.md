@@ -20,13 +20,15 @@ Confirm the import and you now have your blocks loaded in MOKAStudio.
 
 > to refresh click again on the blocks category you have imported.
 
-## Free Libraries
+## Custom library
 
-I created 4 free libraries that you can download and import in your MOKAStudio installation
+You can create a custom library to export clicking on the <i class="material-icons">library_add</i> on any block from the blocks gallery.
 
-- Widgets Library
-- Pages Library
-- Templates Library
-- Sliders Library
+After adding a block to a library you will get a button <button style="background:#63b3ed;color:white;padding:2px 4px">Export Selected</button>
 
-You can contribute creating your own libraries and share with other MOKAStudio users.
+Click the button to export your custom library.
+
+<img src="https://res.cloudinary.com/moodgiver/image/upload/v1611744810/moka_studio_export_selected_library_afa81a08d3.png"/>
+
+Give a name to your library and click Download to export.
+

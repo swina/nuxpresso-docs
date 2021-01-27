@@ -12,7 +12,7 @@ To open the **Customizer** clicking on the <i class="material-icons">brush</i> l
 - selected block/element floating bar
 - editor toolbar
 
-or press **Ctrl + z**
+or press **Alt + z**
 
 ### Settings
 

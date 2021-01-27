@@ -77,7 +77,13 @@ module.exports = {
             'block-create',
             'block-customizer',
             'block-customizer-extend',
-            'block-library'
+            'block-library',
+            'cms',
+            'media',
+            'staging',
+            'publish',
+            'settings',
+            'grid-templates'
           ]
         }
       ]

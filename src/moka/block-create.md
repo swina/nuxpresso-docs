@@ -202,7 +202,9 @@ duplicating it pressing **Alt + d** (duplicate).
 
 Some keyboard shortcuts are available in order to fast edit your blocks.
 
-#### Elements Keyboard shortcuts
+### Keyboard shortcuts
+
+This are the keyboard shortcuts available for the selected element
 
 - **Alt + i** : add element (only containers)
 - **Alt + u** : add reusable block (only containers)
@@ -232,6 +234,12 @@ Thus means that any block you create can be saved as single, indipendent block t
 This gives you the possibility to design blocks one time and then reuse them as you need.
 
 To add a **reusable block** select a container and click on the <i class="material-icons">widgets</i> on the floating bar or the same icon on the toolbar or press **Alt + u**.
+
+### Create a page using reusable blocks (Video)
+
+<video width="640" controls="true">
+    <source src="https://res.cloudinary.com/moodgiver/video/upload/v1611772051/mokastudio_create_page_with_reusable_blocks_b86176ba42.webm">
+</video>
 
 #### Reusable blocks preview
 
@@ -263,6 +271,6 @@ You will asked some info about the new reusable block that will be created. Ente
 >
 > **By the way MOKAStudio will ask for confirmation of the removal**
 
-To remove a block or element just click on the <i class="material-icons">delete</i> icon in the floating bar/toolbar or press **Ctrl + d**.
+To remove a block or element just click on the <i class="material-icons">delete</i> icon in the floating bar/toolbar or press **Alt + d**.
 
 A confirmation modal will ask to confirm the remove of the current block/element
