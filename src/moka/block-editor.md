@@ -1,6 +1,10 @@
 # Block Editor
 
 
+<video width="100%" controls="true">
+    <source src="https://res.cloudinary.com/moodgiver/video/upload/v1611772051/mokastudio_create_page_with_reusable_blocks_b86176ba42.webm"/>
+</video>
+
 ## Editor Dashboard
 
 The Editor Dashboard is the place where you create, update your blocks.

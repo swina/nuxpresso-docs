@@ -1,7 +1,7 @@
 {
   "name": "moka-studio-docs",
   "version": "0.0.1",
-  "description": "MOKAStudio Documentation",
+  "description": "nuxpresso Documentation",
   "main": "index.js",
   "authors": {
     "name": "Antonio Nardone",
