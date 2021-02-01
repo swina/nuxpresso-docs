@@ -7,59 +7,15 @@
 
 After installation at bootstrap it adds the following collections to the general schema:
 
-<table>
-    <thead>
-        <th>Collection</th>
-        <th>Description</th>
-        <th>REST API endpoint</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Articles</td>
-            <td>your content</td>
-            <td>/articles</td>
-        </tr>
-        <tr>
-            <td>Categories</td>
-            <td>your content categories</td>
-            <td>/categories</td>
-        </tr>
-        <tr>
-            <td>Components</td>
-            <td>all blocks created with MOKAStudio</td>
-            <td>/components</td>
-        </tr>
-        <tr>
-            <td>Contacts</td>
-            <td>
-                collects visitors information populated thru contact form/subscribe form
-            </td>
-            <td>/contacts</td>
-        </tr>
-        <tr>
-            <td>Elements</td>
-            <td>
-                single type collection with the elements definitions used in MOKAStudio to create blocks
-            </td>
-            <td>/elements</td>
-        </tr>
-        <tr>
-            <td>Languages</td>
-            <td>
-                enabled languages 
-            </td>
-            <td>/languages</td>
-        </tr>
-        <tr>
-            <td>Settings</td>
-            <td>
-                single type collection with general configuration settings
-            </td>
-            <td>/settings</td>
-        </tr>
-    </tbody>
-</table>
-
+| Collection | Description | REST API endpoint
+| :---          | :--           | :---
+| Articles      | your CMS content | /articles
+| Categories    | your content categories | /categories
+| Components    | all blocks created with MOKAStudio | /components
+| Contacts      | collects visitors information populated thru contact form/subscribe form. **NOT AVAILABLE WITH FULL STATIC CONFIGURATION**  | /contacts
+| Elements      | single type collection with the elements definitions used in MOKAStudio to create blocks | /elements
+| Settings      | single type collection with general configuration settings | /settings
+| Languages     | languages availables | /languages
 
 ## Roles and users
 
@@ -118,6 +74,8 @@ module.exports = {
 
 
 #### Contacts
+
+> **This is availabled only with a public Strapi CMS**
 
 **Path -** ./api/contacts/controllers/contacts.js
 ```

@@ -6,6 +6,8 @@
 
 ## What is Nuxpresso?
 
+> The beta version doesn't support MongoDB database.
+
 **NUXPRESSO** is a website generator based on block driven page design.
 
 Using **MOKAStudio visual blocks builder** you compose your page according to the pieces of information you need to publish.
@@ -19,6 +21,16 @@ Thus means enabling maximum reusability and design control while allowing conten
 You can create shareable blocks that can be used for rich editing experiences in a UI in different projects just exporting/importing them.
 
 The ultimate scope is to build a website that has the cost and time reduction of reusing well known information archetypes expressed as blocks (head, call for action, slider, footer, etc.).
+
+## Full Static
+
+nuxpresso by default is designed to generate a full static version of your website (serverless) and doesn't require any deployment of Strapi CMS
+
+## Public Backend 
+
+When required nuxpresso can use a public Strapi CMS as backend. 
+
+See the configuration and deployment section for more info.
 
 ## Design concept
  

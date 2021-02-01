@@ -2,26 +2,28 @@
 
 NUXPRESSO has been designed to simplify the process to create and maintain web sites based on Strapi CMS.
 
-The concept is to deploy only the data you need nothing more. This will keep your production environment clean and more efficient.
-
-Using MOKAStudio in development mode you will be able to transfer/update your articles and the relative design (blocks) easily with just a click.
+The concept is to deploy a **full static serverless website**. 
 
 Thus means that the normal workflow should be as follows:
 
-## Local development
+## Full Static 
 
 - create the local development environment installing the apps required
 - configure the local environment
 - create blocks, content and add media assets using MOKAStudio
 - local preview of the result using NUXPRESSO Static Site Generator
 
-## Deployment to production
+### Deployment to production
 
-- deploy **nuxpresso** static site generator [**nuxpresso-nuxt**](https://github.com/swina/nuxpresso-nuxt)
-- create a repo (Github,GitLab) of your Strapi CMS created with **nuxpresso-strapi-template**
-- deploy using your repo on a provider of your choice
+Deploy as indicated in the deployment section [**nuxpresso**](/guide/deploy.html#nuxpresso) 
 
-## Staging: Transfer articles/pages
+
+## Public Strapi CMS
+
+If you are not planning to deploy a full static serverless website your workflow will require to transfer your content to the Strapi CMS using MOKAStudio.
+
+
+### Staging: Transfer articles/pages
 
 > In order to be able to transfer/update your articles you need to set the environment variables to connect to your deployed Strapi CMS.
 >
@@ -44,8 +46,11 @@ VUE_APP_REMOTE_PASSWORD=_REMOTE_STRAPI_CMS_PASSWORD
 ```
 
 VUE_APP_PRODUCTION_URL : Your Strapi production URL
+
 VUE_APP_PRODUCTION_GRAPHQL : Your Strapi GraphQL endpoint
+
 VUE_APP_REMOTE_USER : Strapi production user
+
 VUE_APP_REMOTE_PASSWORD: Strapi production user password
 
 

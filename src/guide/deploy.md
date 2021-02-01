@@ -1,15 +1,17 @@
 # Deployment
 
-To publish your website you need to deploy **nuxpresso** (nuxpresso-nuxt) static site generator and **Strapi CMS**
+## Full static
+
+> Default configuration doesn't require any server deployment since it generates a **full static** website
+> You just need to deploy the *./dist* folder to your hosting provider
 
 
-## nuxpresso
+### nuxpresso
 
-nuxpresso is the static site generator that will run your website. 
 
-Create a repo of your nuxpresso installation. 
+1. Create a repo of your nuxpresso installation. 
 
-When you have created your website in the local development run the generate command 
+2. run the generate command 
 
 ```
 /nuxpresso/nuxpresso-nuxt $ yarn generate
@@ -17,7 +19,7 @@ When you have created your website in the local development run the generate com
 
 This will create you static version in the **./dist** folder
 
-Then commit to your repo
+3. Commit to your repo including the **./dist** folder (remove from .gitignore)
 
 ```
 /nuxpresso/nuxpresso-nuxt $ git add .
@@ -26,21 +28,30 @@ Then commit to your repo
 ```
 
 If you are using providers like Netlify, Vercel, ecc. connect the deployment to your repo.
-To publish leave the deployment command to build
 
+4. To publish leave the deployment command to build empty
+
+5. Set the destination folder to **./dist**
+
+### Assets
+
+#### Local Upload
+
+Using local upload requires to copy the **./public/uploads** folder content to **./static/uploads** folder of nuxpresso
+
+#### External provider for upload
+
+Using an external upload provider for your assets doesn't require any action.
+
+
+## Public Strapi CMS
+
+### nuxpresso
 
 Set the deployment environment variables as indicated in the configuration updating the data to connect to your production Strapi CMS. Refer to [nuxpresso configuration](/guide/configuration.html#nuxpresso-configuration)
 
-## MOKAStudio
 
-> MOKAStudio doesn't require a production deployment since you can run on a local environment and connect to your Strapi CMS. Just update the environment variables to set the credentials. Refer to [MOKAStudio configuration](/guide/configuration.html#mokastudio-configuration)
-
-**For security reasons my advice is to not deploy MOKAStudio**
-
-If you plan to deploy MOKAStudio on a public server just use the original [repo](https://github.com/swina/nuxpresso-moka) and set the environment variables to connect to the Strapi CMS.
-
-
-## Strapi CMS
+### Strapi CMS
 
 Strapi CMS for nuxpresso is based on a custom template. If you plan to deploy on most common providers like Heroku, AWS or others that support, you must create a repository with the Strapi CMS created following this guide.
 
@@ -124,3 +135,11 @@ Thus means that for some providers, like Heroku free plan, the assets will be de
 
 I suggest to read my [Workflow](/guide/workflow.html) guide in order to understand better NUXPRESSO workflow.
 
+
+## MOKAStudio
+
+> MOKAStudio doesn't require a production deployment since you can run on a local environment and connect to your Strapi CMS. Just update the environment variables to set the credentials. Refer to [MOKAStudio configuration](/guide/configuration.html#mokastudio-configuration)
+
+**For security reasons my advice is to not deploy MOKAStudio**
+
+If you plan to deploy MOKAStudio on a public server just use the original [repo](https://github.com/swina/nuxpresso-moka) and set the environment variables to connect to the Strapi CMS.
