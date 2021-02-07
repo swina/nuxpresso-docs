@@ -120,6 +120,12 @@ When blocks are added to the design board, moving the mouse over any block/eleme
 
 Clicking on a container/block the border will stay visible, indicating that that block is a current selected one.
 
+### Tip 
+
+> Sometimes elements overlaps so the floating bar icons are not cliccable
+> Use the toolbar or the keyboard shortcuts
+
+
 When you have a selected element you also have:
 - a floating bar showing at the top left corner of the element itself
 

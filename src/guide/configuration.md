@@ -6,19 +6,32 @@ In order to connect to your Strapi CMS you need to configure **nuxpresso** and *
 
 Create an ```.env``` file at the root folder of nuxpresso (default ```nuxpresso-nuxt```) and add the following environment variables
 
+
 ```
-API_URL=http://localhost:1337/
-RECAPTCHA=_RECAPTCHA_API_KEY (if used)
-NUXPRESSO_TITLE=nuxpresso
-NUXPRESSO_HEADLINE=Your next CMS
-FONT_FAMILIES=Barlow+Condensed|Abel|Alice|Alegreya|Amethysta|Nunito+Sans|Roboto|Quattrocento|Raleway|Lora|PT+Sans
+API_URL=_Strapi_CMS_URL_
+FULL_STATIC=true|false
+LOCAL_ASSETS=true|false
+UPLOADS_FOLDER=_Strapi_CMS_UPLOADS_FOLDER_PATH
+NUXPRESSO_TITLE=_YOUR_WEBSITE_TITLE_
+NUXPRESSO_HEADLINE=_YOUR_WEBSITE_HEADLINE_
+FONT_FAMILIES=_FONTS_LIST_SEPARATED_BY_|_
+GOOGLE_ANALYTICS=UA-XXXXXXX
+EMAIL_SENDER=_YOUR_EMAIL_SENDER_ENDPOINT
+RECAPTCHA=_RECAPTCHA_API_KEY_
 ```
 
-- API_URL : Strapi CMS url
-- RECAPTCHA : the Recaptcha API KEY (not required in local environment). We suggest to use it in production environment
-- NUXPRESSO_TITLE: website title
-- NUXPRESSO_HEADLINE : website headline
-- FONT_FAMILIES: list of fonts used separated by |. Read about Fonts [support](/guide/configuration.html#font-support)
+| Variable | Description
+| :---      | :---
+| API_URL     | Strapi CMS url
+| FULL_STATIC | when you go to full static during the generate process your media assets will be copied from your local Strapi
+| LOCAL_ASSETS | true | false 
+| UPLOADS_FOLDER | Strapi CMS uploads folder path. Used if LOCAL_ASSETS is true
+| NUXPRESSO_TITLE | website title
+| NUXPRESSO_HEADLINE | website headline
+| FONT_FAMILIES | list of fonts used separated by |. Read about Fonts [support](/guide/configuration.html#font-support)
+| GOOGLE_ANALYTICS | Google Analytics ID
+| EMAIL_SENDER  | Going full static you need a remote form submission URL with email send support
+| RECAPTCHA   | the Recaptcha API KEY (not required in local environment). We suggest to use it in production environment
 
 
 ### Google Analytics

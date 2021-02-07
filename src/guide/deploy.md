@@ -35,14 +35,6 @@ If you are using providers like Netlify, Vercel, ecc. connect the deployment to 
 
 ### Assets
 
-#### Local Upload
-
-Using local upload requires to copy the **./public/uploads** folder content to **./static/uploads** folder of nuxpresso
-
-#### External provider for upload
-
-Using an external upload provider for your assets doesn't require any action.
-
 
 ## Public Strapi CMS
 

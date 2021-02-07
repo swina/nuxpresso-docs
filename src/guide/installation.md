@@ -2,30 +2,14 @@
 
 ## Requirements
 
-<table>
-    <thead>
-        <th>Software</th>
-        <th>Minimum version</th>
-        <th>Recommended version</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Node.js</td>
-            <td>12.x</td>
-            <td>14.x</td>
-        </tr>
-        <tr>
-            <td>yarn (suggested)</td>
-            <td>1.22</td>
-            <td>1.22</td>
-        </tr>
-        <tr>
-            <td>npm</td>
-            <td>6.x</td>
-            <td>6.x</td>
-        </tr>
-    </tbody>
-</table>
+| Software | Version | Remarks
+| :---      | :---    | :---
+| Nodejs    | > 12    | Strapi CMS supported version. See Strapi documentation
+| yarn      | > 1.22  | (recommended)
+| npm       | > 6.6
+| database  | any supported by Strapi | **MondoDB is not supported by the current version of nuxpresso**
+
+> If you plan to go Servless Full Static with nuxpresso no database is required (SQLLite usage) 
 
 
 ## Installation

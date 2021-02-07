@@ -11,9 +11,11 @@ General settings for the website.
 | **SEO Title** | Default SEO title META TAG. This is used if no SEO title set in an article
 | **SEO Description** | Default SEO description META TAG. This is used if no SEO description set in an article
 | **Read More text** | Default text for article loop template
+| **Responsive Menu Class** | Add custom class to the responsive menu
+| **Responsive menu transition** | Add custom transition to responsive menu (default fade)
 | **Layout settings** | You can set default colors (text and background) and relative dark mode colors (not implemented yet)
 | **Enable darkmode** | Enable dark mode (not available in this version)
-| **Enable Breadcrumb** | Enable breadcrumb on pages
+| **Enable Breadcrumb** | Enable breadcrumb on pages (not available in this version)
 | **Enable Scrolltop** | Enable scrolltop icon
 
 
