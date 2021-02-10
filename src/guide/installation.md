@@ -58,6 +58,9 @@ npx create-strapi-app nuxpresso-strapi --template https://github.com/swina/nuxpr
 ```
 
 Follow the instructions required by the Strapi CMS installation.
+
+For local development select **Quickstart** installation.
+
 At first run **nuxpresso-strapi-template** will: 
 
 - create the admin user 
@@ -69,6 +72,7 @@ At first run **nuxpresso-strapi-template** will:
 - import a library of blocks ready to use
 - set a default settings
 - create a initial simple homepage
+- set the permission to create/update used by MOKAStudio. Since is running locally the template will grat full permission to the Public Role.
 
 > **nuxpresso-strapi-template** is intended to be used in local environment and uses a custom ./config/bootstrap.js. If you plan to deploy your Strapi CMS installation create environment variables according to the [deployment section](/guide/deploy.html#strapi-cms-deployment)
 

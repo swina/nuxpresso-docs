@@ -33,8 +33,6 @@ If you are using providers like Netlify, Vercel, ecc. connect the deployment to 
 
 5. Set the destination folder to **./dist**
 
-### Assets
-
 
 ## Public Strapi CMS
 
@@ -65,6 +63,12 @@ SITE_EMAIL=_SITE_EMAIL_
 ```
 
 ### Database connection 
+
+>
+> **nuxpresso-strapi-template** installs by default the packages for SQLite, mySQL and Postgres.
+> 
+> **MongoDB** at the moment is not supported by nuxpresso-nuxt and MOKAStudio
+>
 
 - update  **./config/database.js**
 

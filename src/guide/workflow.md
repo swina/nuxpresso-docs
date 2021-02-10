@@ -4,9 +4,18 @@ NUXPRESSO has been designed to simplify the process to create and maintain web s
 
 The concept is to deploy a **full static serverless website**. 
 
+By the way nuxpresso can work with 3 different scenario:
+
+| Application      | Serverless | Strapi Cloud  | nuxpresso / Strapi Cloud | Notes
+| :---              | :---      | :--- | :--- | :--- | :---
+| **nuxpresso**     | local     | local   | deploy | Generate locally / Deploy **./dist** folder
+| **MOKAStudio**    | local     | local   | local  | Suggested always locally
+| **Strapi CMS**    | local     | deploy  | deploy | 
+
+
 Thus means that the normal workflow should be as follows:
 
-## Full Static 
+## Serverless 
 
 - create the local development environment installing the apps required
 - configure the local environment
@@ -15,15 +24,28 @@ Thus means that the normal workflow should be as follows:
 
 ### Deployment to production
 
-Deploy as indicated in the deployment section [**nuxpresso**](/guide/deploy.html#nuxpresso) 
+Deploy **./dist** folder as indicated in the deployment section [**nuxpresso**](/guide/deploy.html#nuxpresso) 
 
 
-## Public Strapi CMS
+## Strapi in the Cloud
+
+Suppose you have different remote contributors to your Strapi CMS like editors, published that constantly add or update contents you need to deploy you Strapi to the cloud.
+
+### Layout updates or new design 
+
+In this case you can connect MOKAStudio directly to the remote Strapi backend and manage the publishing of new revisions or any update of the website.
+Then run a new generate with nuxpresso-nuxt and deploy the changes.
+
+### Flexibility of working locally
+
+nuxpresso has been developed thinking to developers that loves to work locally      
 
 If you are not planning to deploy a full static serverless website your workflow will require to transfer your content to the Strapi CMS using MOKAStudio.
 
 
 ### Staging: Transfer articles/pages
+
+If you worked on a local Strapi installation but you need to deploy it in the cloud you can use MOKAStudio Staging option to transfer only the articles/blocks that you need to publish.
 
 > In order to be able to transfer/update your articles you need to set the environment variables to connect to your deployed Strapi CMS.
 >
@@ -35,6 +57,7 @@ If you are not planning to deploy a full static serverless website your workflow
 ```
 VUE_APP_API_URL=http://localhost:1337/
 VUE_APP_GRAPHQL=http://localhost:1337/graphql
+VUE_APP_LOCAL=true|false
 VUE_APP_DEV_USER=_username_
 VUE_APP_DEV_PASSWORD=_password_
 VUE_APP_DEV_EMAIL=_email_
@@ -74,7 +97,7 @@ Normally you don't need to transfer any block other then the loop template block
 
 ### Media assets
 
-My advice is to use an external media provider also in development mode since this will simplify the deployment and data transfer. 
+In this case my advice is to use an external media provider also in development mode since this will simplify the deployment and data transfer. 
 
 Thus because using the staging feature you can update your production data without the need to transfer any media.
 
@@ -85,3 +108,6 @@ For this reason **if you don't use an external provider** your media assets will
 ```
 https://_your_strapi_url/upload/_file_name
 ```
+
+> **If you are planning to run Strapi file upload local option on Heroku or similar without persistent storage of data since that uses a ephemeral filesystem your upload folder will be deleted at every ciclyng process**
+> Read more from this [article](https://help.heroku.com/K1PPS2WM/why-are-my-file-uploads-missing-deleted)

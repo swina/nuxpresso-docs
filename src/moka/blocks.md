@@ -74,54 +74,11 @@ A block is an object representation of HTML elements.
 In MOKAStudio there are different types of elements, organized in order to simplify the creation and manipulation of HTML blocks.
 
 
-### Block Elements
+## Block Elements
 
-- **Containers**: containers are HTML elements used to organize the layout of your content. In MOKAStudio you have the following containers:
-    - grid (multicolumn and column span support)
-    - flexbox (column and row direction)
-    - popup (to create popup/modal window)
-    - articles loop (to output dynamic collections of articles, lists)
+Elements available in MOKAStudio editor used to create blocks and elements.
 
-- **Text**:
-    - heading: H1 - H6 elements
-    - rich text: paragraph editable with a rich text editor integrated or inline editing
-    - text: simple text, multiline with inline editing support
-    - quote: blockquote element
-    - code: used to input code style text
-
-- **Media**
-    - image: any web image supported (svg included)
-    - video: mp4/webm support
-    - youtube video
-    - vimeo video
-    - audio
-    - icon (material icons)
-
-- **Form**
-    - form
-    - input text
-    - input number
-    - input hidden
-    - input email
-    - textarea
-    - checkbox
-    - button
-
-- **Menu**
-    - horizontal menu
-    - vertical menu
-
-- **Article**
-
-This elements are used to output dynamic content from Strapi CMS Article collection. They are used in templates in order to filter and design the output elements like:
-
-- title
-- excerpt
-- content
-- category
-- image
-- author
-- update date
+<MokaElements></MokaElements>
 
 ### Block hierarchy
 

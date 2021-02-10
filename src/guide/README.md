@@ -6,9 +6,11 @@
 
 ## What is Nuxpresso?
 
-> The beta version doesn't support MongoDB database.
+- a visual blocks builder (**MOKAStudio**) to create pages, templates, widgets
+- static website generator (**nuxpresso-nuxt**) to create a full static website
+- a Strapi custom template designed to work with nuxpresso as backend
 
-**NUXPRESSO** is a website generator based on block driven page design.
+The main concept is to create a website based on block driven page design.
 
 Using **MOKAStudio visual blocks builder** you compose your page according to the pieces of information you need to publish.
 
@@ -24,7 +26,7 @@ The ultimate scope is to build a website that has the cost and time reduction of
 
 ## Full Static
 
-nuxpresso by default is designed to generate a full static version of your website (serverless) and doesn't require any deployment of Strapi CMS
+nuxpresso by default configuration is designed to generate a full static version of your website (serverless) and doesn't require any deployment of Strapi CMS.
 
 ## Public Backend 
 
@@ -35,14 +37,14 @@ See the configuration and deployment section for more info.
 ## Design concept
  
 
-- [**nuxpresso-nuxt**](https://github.com/swina/nuxpresso-nuxt) a static site generator based on NuxtJS
 - [**MOKAStudio**](https://github.com/swina/nuxpresso-moka) a visual blocks builder created to improve the websites creative experience for developers.
-
+- [**nuxpresso-nuxt**](https://github.com/swina/nuxpresso-nuxt) a static site generator based on NuxtJS.
+- [**nuxpresso-strapi-template**](https://github.com/swina/nuxpresso-strapi-template) a Strapi CMS template to configure Strapi working with nuxpresso.
 Based on [Strapi CMS](https://strapi.io) it also takes advantages of the [Strapi CMS templates feature](https://strapi.io/documentation/developer-docs/latest/concepts/templates.html#templates) to set a custom configuration upon installation.
+- [**TailwindCSS**](https://tailwindcss.com) as styling framework.
 
-- [**nuxpresso-strapi-template**](https://github.com/swina/nuxpresso-strapi-template) a Strapi CMS template to configure Strapi working with nuxpresso 
 
-The following diagram shows the relations between the 3 apps.
+The following diagram shows how nuxpresso works.
 
 <img src="https://res.cloudinary.com/moodgiver/image/upload/v1607699698/nuxpresso_concept_last_e14ca7a8df.jpg"/>
 

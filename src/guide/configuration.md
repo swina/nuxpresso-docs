@@ -20,15 +20,15 @@ EMAIL_SENDER=_YOUR_EMAIL_SENDER_ENDPOINT
 RECAPTCHA=_RECAPTCHA_API_KEY_
 ```
 
-| Variable | Description
-| :---      | :---
+| Variable | Description | Notes
+| :---      | :---      | :---
 | API_URL     | Strapi CMS url
 | FULL_STATIC | when you go to full static during the generate process your media assets will be copied from your local Strapi
-| LOCAL_ASSETS | true | false 
+| LOCAL_ASSETS | true / false 
 | UPLOADS_FOLDER | Strapi CMS uploads folder path. Used if LOCAL_ASSETS is true
 | NUXPRESSO_TITLE | website title
 | NUXPRESSO_HEADLINE | website headline
-| FONT_FAMILIES | list of fonts used separated by |. Read about Fonts [support](/guide/configuration.html#font-support)
+| FONT_FAMILIES | list of fonts used separated by the character`|` Set only fonts used by your website
 | GOOGLE_ANALYTICS | Google Analytics ID
 | EMAIL_SENDER  | Going full static you need a remote form submission URL with email send support
 | RECAPTCHA   | the Recaptcha API KEY (not required in local environment). We suggest to use it in production environment
@@ -70,26 +70,32 @@ Create an ```.env``` file at the root folder of MOKAStudio (default ```nuxpresso
 ```
 VUE_APP_API_URL=http://localhost:1337/
 VUE_APP_GRAPHQL=http://localhost:1337/graphql
+VUE_APP_LOCAL=true|false
 VUE_APP_DEV_USER=_username_
 VUE_APP_DEV_PASSWORD=_password_
 VUE_APP_DEV_EMAIL=_email_
 VUE_APP_FONT_FAMILIES=|Abel|Alice|Alegreya|Amethysta|Nunito+Sans|Roboto|Quattrocento|Raleway|Lora|PT+Sans
 ```
 
-- VUE_APP_API_URL : Strapi CSM url
-- VUE_APP_GRAPHQL : Strapi Graphql endpoint
-- VUE_APP_DEV_USER : Strapi CMS Authenticated user to work with MOKAStudio
-- VUE_APP_DEV_PASSWORD : user password
-- VUE_APP_DEV_EMAIL : email address
-- VUE_APP_FONT_FAMILIES : list of font families separated by |. MOKAStudio adds by default the Barlow Condensed font used by the application. For this reason the first character of the environment variable is |.
+| Variable | Description | Notes
+| :---      | :---        | :---
+| VUE_APP_API_URL | Strapi CSM url | *ex. http://localhost:1337/*
+| VUE_APP_GRAPHQL | Strapi Graphql endpoint | *ex. http://localhost:1337/graphql*
+| VUE_APP_LOCAL   | Strapi local | Set false if connecting to a remote Strapi 
+| VUE_APP_DEV_USER | Strapi CMS Authenticated user | Required only in *production*
+| VUE_APP_DEV_PASSWORD | user password | Required only in *production*
+| VUE_APP_DEV_EMAIL | email address | Required only in *production*
+| VUE_APP_FONT_FAMILIES | list of font families separated by '\|' | MOKAStudio adds by default the Barlow Condensed font used by the application. For this reason the first character of the environment variable is |.
 
-> **A user is required in order to update Strapi CMS data.**
 >
-> **Setting this user credential MOKAStudio will create the user at first run**
+> **No user is required in order to update Strapi CMS data in development environment**
+> 
+> **If MOKAStudio will connect to a remote Strapi it will create the user at first run**
+> **You need also to grant full permissions to the authenticated user**
 
-#### Font support
+#### Fonts support
 
-> You can add your fonts using the environment variables. Any font added here will be available in MOKAStudio as font setting for any element. 
+> You can add google fonts using the environment variables. Any font added here will be available in MOKAStudio as font setting for any element. 
 >
 > To reduce the size of extra fonts in **nuxpresso** add only fonts that are used on your website 
 
@@ -97,8 +103,9 @@ VUE_APP_FONT_FAMILIES=|Abel|Alice|Alegreya|Amethysta|Nunito+Sans|Roboto|Quattroc
 
 ## Strapi CMS
 
-In local development no special configuration is required. All configuration and settings are automatically created at installation time except for the GraphQL plugin. To add GraphQL support yuo need to create a 
-./config/plugins.js as follows
+In local development no special configuration is required. All configuration and settings are automatically created at installation time except for the GraphQL plugin. 
+
+**To add GraphQL support you need to create a ./config/plugins.js as follows**
 
 **Path -** ./config/plugins.js
 
@@ -129,9 +136,9 @@ If you followed our installation and configuration guide you have a [Strapi CMS 
 /nuxpresso/nuxpresso-strapi $ yarn develop
 ```
 
-### Update the Public Role permissions
+### Update the Public Role permissions in production
 
-**In order to work nuxpresso needs you need to grant read permissions to the Public role.**
+**In order to work with a remote Strapi CMS installation nuxpresso needs you need to grant read permissions to the Public role.**
 
 - Login to the Strapi CMS.
 - Go to **Settings**
