@@ -2,6 +2,10 @@
 
 In order to connect to your Strapi CMS you need to configure **nuxpresso** and **MOKA Studio**
 
+> Cloning the nuxpresso repos you will find **.env.default.example** in the root folder.
+>
+> Update them with your data and rename to **.env**
+
 ## nuxpresso
 
 Create an ```.env``` file at the root folder of nuxpresso (default ```nuxpresso-nuxt```) and add the following environment variables
@@ -16,7 +20,7 @@ NUXPRESSO_TITLE=_YOUR_WEBSITE_TITLE_
 NUXPRESSO_HEADLINE=_YOUR_WEBSITE_HEADLINE_
 FONT_FAMILIES=_FONTS_LIST_SEPARATED_BY_|_
 GOOGLE_ANALYTICS=UA-XXXXXXX
-EMAIL_SENDER=_YOUR_EMAIL_SENDER_ENDPOINT
+FORM_SENDER=_YOUR_FORM_SENDER_ENDPOINT
 RECAPTCHA=_RECAPTCHA_API_KEY_
 ```
 
@@ -30,7 +34,7 @@ RECAPTCHA=_RECAPTCHA_API_KEY_
 | NUXPRESSO_HEADLINE | website headline
 | FONT_FAMILIES | list of fonts used separated by the character`|` Set only fonts used by your website
 | GOOGLE_ANALYTICS | Google Analytics ID
-| EMAIL_SENDER  | Going full static you need a remote form submission URL with email send support
+| FORM_SENDER  | Going full static you need a remote form submission URL with email send support
 | RECAPTCHA   | the Recaptcha API KEY (not required in local environment). We suggest to use it in production environment
 
 

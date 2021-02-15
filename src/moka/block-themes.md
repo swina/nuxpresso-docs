@@ -20,11 +20,19 @@ Click on a single block to open a full screen working preview.
 
 To save the Theme Kit click on the **Save** button.
 
-> Theme Kit images are encoded as data uri base64. 
+> Theme Kit images used for the blocks preview are encoded as data uri base64.  
 >
 > No files are added to your system and no media are uploaded to Strapi
-> 
-> If you want to save the files you need to unzip them on your system
+>
+> Images used in any imported block are not uploaded to Strapi so there will not be available in the editor/preview 
+
+If you want to use the images used in the imported blocks you need to : 
+
+1. unzip images in the theme kit zip file on your system
+2. upload the images with MOKAStudio
+3. update the blocks images with the images uploaded
+
+
 
 
 
