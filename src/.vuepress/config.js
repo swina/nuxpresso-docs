@@ -78,6 +78,7 @@ module.exports = {
             'block-customizer',
             'block-customizer-extend',
             'block-library',
+            'block-themes',
             'cms',
             'media',
             'staging',

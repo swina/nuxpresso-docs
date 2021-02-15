@@ -7,6 +7,7 @@ Located in the left drawer the main menu gives you access to all MOKAStudio func
 
 - **Home**: dashboard
 - **Blocks**: blocks manager
+- **Themes** : import Themes Kit created by nuxpresso
 - **CMS**: articles manager
 - **Media**: media manager
 - **Settings**: main settings

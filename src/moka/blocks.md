@@ -78,6 +78,8 @@ In MOKAStudio there are different types of elements, organized in order to simpl
 
 Elements available in MOKAStudio editor used to create blocks and elements.
 
+> Category article refers to the Articles collection fields.
+
 <MokaElements></MokaElements>
 
 ### Block hierarchy

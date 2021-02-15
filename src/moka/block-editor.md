@@ -89,18 +89,18 @@ Number of articles listed in the loop
 
 The **Topbar** is set to:
 
-- **close** the current editor window clicking on the <i class="material-icons" style="color:red">fiber_manual_record</i> icon at the top left of the window
-- **select**: select the current document clicking on the <i class="material-icons" style="color:yellow">fiber_manual_record</i> icon
-- **preview**: full preview of the current document clicking on the <i class="material-icons" style="color:green">fiber_manual_record</i> icon
-- name of the current document, category and unique ID
-- <i class="material-icons">settings</i> document settings
-- at the right you have a group of icons with the following functions:
-    - <i class="material-icons">save</i> **save**
-    - <i class="material-icons">file_copy</i> **duplicate** or save as
-    - <i class="material-icons">web</i> **create** a new article that will use the document as layout
-    - <i class="material-icons">system_update_alt</i> **import** a reusable block
-    - <i class="material-icons">backup</i> **export** the current document to file (JSON)
-    - <i class="material-icons">remove_red_eye</i> **preview** preview the current document
+| Icon | Function 
+| :---: | :--- 
+| <i class="material-icons" style="color:red">fiber_manual_record</i> | **close** the current editor window clicking on the icon at the top left of the window
+|<i class="material-icons" style="color:yellow">fiber_manual_record</i> |**select**: select the current document clicking on the  icon
+| <i class="material-icons" style="color:green">fiber_manual_record</i> | **preview** full preview of the current document clicking on the  icon
+|<i class="material-icons">settings</i> | document **settings**
+|<i class="material-icons">save</i> | **save**
+|<i class="material-icons">file_copy</i> | **duplicate** or save as
+|<i class="material-icons">web</i> | **create** a new article that will use the document as layout
+|<i class="material-icons">system_update_alt</i> | **import** a reusable block
+|<i class="material-icons">backup</i> | **export** the current document to file (JSON)
+|<i class="material-icons">remove_red_eye</i> | **preview** preview the current document
 
 ## Design board
 
@@ -140,21 +140,19 @@ When you have a selected element you also have:
 Depending on the element selected the floating bar as different icons as a shortcut for common functions.
 Following icons/actions are available for all elements
 
-- <i class="material-icons">view_columns</i> icon: indicates the element type. Clicking on the you can replace the element with another type (all data of the current element will be removed)
-
-- <i class="material-icons">edit</i> (not available for containers) : depending on the current element the edit action can be :
-    - edit the text
-    - add image
-    - select icon
-
-- <i class="material-icons">brush</i> opens the [**customizer**](#customizer) panel where you can customize your element attributes assigning the TailwindCSS pseudo-classes
-
-- <i class="material-icons">delete</i> removes the element from the design board. A confirmation modal will be displayed.
+| Icon | Function | Shortcut
+| :---: | :--- | :---
+|<i class="material-icons">view_columns</i>| indicates the element type. Clicking on the you can replace the element with another type (all data of the current element will be removed)
+|<i class="material-icons">expand_less</i> | move element up *(you can use also the black dot on the right upper corner)*
+|<i class="material-icons">edit</i> | (not available for containers) : depending on the current element the edit action can be : edit the text, add image or select icon | Alt + w
+|<i class="material-icons">brush</i> | opens the [**customizer**](#customizer) panel where you can customize your element attributes assigning the TailwindCSS pseudo-classes | Alt + z
+|<i class="material-icons">delete</i> | removes the element from the design board. A confirmation modal will be displayed. | Alt + r
 
 If the selected element is a container you will have also the following icons/actions
-
-- <i class="material-icons">add</i> add an element to the current selection selecting from the **elements drawer**
-- <i class="material-icons">widgets</i> add a reusable block to the current selection selecting one from the **reusables block drawer**
+| Icon | Function | Shortcut
+| :---: | :--- | :---
+|<i class="material-icons">add</i>| add an element to the current selection selecting from the **elements drawer** | Alt + i
+|<i class="material-icons">widgets</i> | add a reusable block to the current selection selecting one from the **reusables block drawer** | Alt + u
 
 
 ## Toolbar
@@ -165,40 +163,28 @@ The toolbar is fully available when a block is selected.
 <img src="https://res.cloudinary.com/moodgiver/image/upload/v1610451439/moka_editor_toolbar_619cb2b163.png"/>
 
 The toolbar gives you the tools to for the current selection (left side of the toolbar):
-
-<i class="material-icons">add</i> add an element (available only for containers)
-
-<i class="material-icons">edit</i> edit the current element content (not available for containers)
-
-<i class="material-icons">brush</i> customize the current element design
-
-<i class="material-icons">widgets</i> add a reusable block (available only for containers)
-
-<i class="material-icons">content_copy</i> copy the current element in the clipboard
-
-<i class="material-icons">content_paste</i> paste the copied element to the current element
-
-<i class="material-icons">file_copy</i> duplicate the current element
-
-<i class="material-icons">motion_photos_on</i> set the animation for the current element
-
-<i class="material-icons">archive</i> save current block as reusable block
-
-<i class="material-icons">account_tree</i> display the current element/block tree
-
-<i class="material-icons">delete</i> remove the current element/block 
+| Icon | Function | Shortcut
+| :---: | :--- | :---
+|<i class="material-icons">add</i>| add an element (available only for containers) | Alt + i
+|<i class="material-icons">edit</i> | edit the current element content (not available for containers) | Alt + w
+|<i class="material-icons">brush</i> | customize the current element design | Alt + z
+|<i class="material-icons">widgets</i> | add a reusable block (available only for containers) | Alt + u
+|<i class="material-icons">content_copy</i> | copy the current element in the clipboard | Alt + c
+|<i class="material-icons">content_paste</i> | paste the copied element to the current element | Alt + v
+|<i class="material-icons">file_copy</i> | duplicate the current element | Alt + d
+|<i class="material-icons">motion_photos_on</i> | set the animation for the current element | Alt + a
+|<i class="material-icons">archive</i> | save current block as reusable block 
+|<i class="material-icons">account_tree</i> | display the current element/block tree | Alt + t
+|<i class="material-icons">delete</i> | remove the current element/block | Alt + r
 
 On the right side of the toolbar you have tools for the global document
-
-<i class="material-icons">select_all</i> select the document
-
-<i class="material-icons">add</i> add a new block to the document
-
-<i class="material-icons">widgets</i> add a reusable block to the document
-
-<i class="material-icons">remove_red_eye</i> preview
-
-<i class="material-icons">save</i> save the document
+| Icon | Function | Shortcut
+| :---: | :--- | :---
+| <i class="material-icons">select_all</i> | select the document
+| <i class="material-icons">add</i> | add a new block to the document | Alt + i
+| <i class="material-icons">widgets</i> | add a reusable block to the document | Alt + u
+| <i class="material-icons">remove_red_eye</i> | preview | Alt + b
+| <i class="material-icons">save</i> | save the document | Alt + s
 
 
 
@@ -208,11 +194,15 @@ The status bar gives you info about the current selected element.
 
 <img src="https://res.cloudinary.com/moodgiver/image/upload/v1610479440/moka_studio_editor_status_bar_6b73a8d8af.png"/>
 
+### Input custom classes
+
+You can input your custom class in the CSS Class input field. This can be useful when you need to define specific classes (responsive values)
+
 From the Status Bar you can also view/update the CSS Classes for the current element.
-
-<i class="material-icons">edit</i> open the CSS classes editor and style editor for the element
-
-<i class="material-icons">brush</i> open the [**Customizer**](/moka/block-customizer)
+| Icon | Function | Shortcut
+| :---: | :--- | :---
+| <i class="material-icons">edit</i> | open the CSS classes editor and style editor for the element
+| <i class="material-icons">brush</i> | open the [**Customizer**](/moka/block-customizer) | Alt + z
 
 
 ## Animations
@@ -228,11 +218,12 @@ To assign an animation to a selected block/element click on the <i class="materi
 <img src="https://res.cloudinary.com/moodgiver/image/upload/v1610883811/moka_editor_animations_988b956fcd.png"/>
 
 ### Animation settings
-
-- **Animation** : select an animation from the list 
-- **Easing** : select an easing settings from the list
-- **Duration** : set the animation duration in secs
-- **Delay**: set the animation delay (0=plays immediately)
+| Field | Function | Notes
+| :--- | :--- | :---
+| **Animation** | select an animation from the list | MOKAStudio comes with a set of preset animations. You can add, update or remove them as stated below. 
+| **Easing** | select an easing settings from the list | Presets 
+| **Duration** | set the animation duration in secs | Will be fired when the item is not off the screen
+| **Delay** | set the animation delay (0=plays immediately) | Will be fired only if item is not off the screen
 
 ### ScrollTrigger
 

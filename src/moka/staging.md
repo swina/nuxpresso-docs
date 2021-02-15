@@ -1,5 +1,7 @@
 # Staging
 
+> **This option is available only in development mode and if you have a production Strapi CMS different from the local Strapi installation**
+
 The basic concet of nuxpresso is to help developers to create, publish and maintain websites easily.
 
 In a normal workflow MOKAStudio is used to develop a website locally and then transfer your work to production.

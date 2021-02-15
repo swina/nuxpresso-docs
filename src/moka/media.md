@@ -12,6 +12,8 @@ To upload new media click on <button style="background:#63b3ed;color:white;paddi
 
 Click on the window and select the media you want to upload.
 
+> **Updated: upload supports multiple file upload**
+>
 > Supported media: depends on you upload provider. Normally you can upload any file supported by the target provider
 
 A preview will be available if supported (image). Click Upload to start the file transfer.
