@@ -25,10 +25,7 @@ The administrator user will be created automatically at Strapi CMS bootstrap (de
 > username: admin
 > password: password
 
-
-**In order to use MOKAStudio you need to create a user (Users collection) and grant full permission to the authenticated role to the collections above mentioned and File Upload endpoints.**
-
-> My advice is to create a custom role (like Developers) and assign the MOKAStudio user to that role. Then grant full permissions only to this role. In this way you can manage the Authenticated role in a standard way, or as per your needs.
+**nuxpresso-strapi-template working in local development grants full permissions to Public Role to all collections**
 
 ## Initial Data
 
