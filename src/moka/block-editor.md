@@ -288,8 +288,10 @@ The ```const gsapEase``` are the easing modes available in GSAP. Do not change i
 
 | Keyboard  | Shortcut
 | :---      | :---
+| **Alt + q** | add element (only containers)
 | **Alt + i** | add element (only containers)
 | **Alt + u** | add reusable block (only containers)
+| **Alt + m** | move current element up
 | **Alt + d** | duplicate element
 | **Alt + w** | edit content / add image
 | **Alt + z** | open the **Customizer**

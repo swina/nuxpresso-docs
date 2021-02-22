@@ -73,6 +73,7 @@ module.exports = {
             'menu',
             'dashboard',
             'blocks',
+            'block-advanced',
             'block-editor',
             'block-create',
             'block-customizer',
